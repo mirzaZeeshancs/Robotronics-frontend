@@ -69,8 +69,8 @@ const ContactUsForm = () => {
     <div className="lg:p-20 p-8 bg-background space-y-10">
       {/* line */}
       <div className="space-y-10">
-        <div className="w-full border border-lin "></div>
-        <button className="border border-lightbrown poppins-light p-2 rounded-full px-5">
+        <div className="w-full border border-lin "data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000"></div>
+        <button className="border border-lightbrown poppins-light p-2 rounded-full px-5"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
           Get In Touch
         </button>
       </div>
@@ -79,13 +79,13 @@ const ContactUsForm = () => {
         {/* Text */}
         <div className="lg:w-2/3">
           <div className="space-y-10">
-            <h1 className="text-5xl poppins-bold text-brown">Contact Us</h1>
-            <p className="text-xl poppins-light text-wrap">
+            <h1 className="text-5xl poppins-bold text-brown"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">Contact Us</h1>
+            <p className="text-xl poppins-light text-wrap"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
               Get in touch with us today to start your Robotics journey...
             </p>
           </div>
           {/* contact icons& Text */}
-          <div className="py-5 space-y-2">
+          <div className="py-5 space-y-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
             {/* phone */}
             <div className="flex flex-row space-x-2">
               <div className="rounded-full p-2">
@@ -118,7 +118,7 @@ const ContactUsForm = () => {
           {/* Social icons */}
           <div className="flex flex-row lg:py-20 py-8 p-5 space-x-2 ">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com"data-aos="fade-up" data-aos-duration="2000"
               target="_blank"
               rel="noopener noreferrer"
               className="lg:p-3 p-1 rounded-xl bg-brown transition-colors duration-300 ease-out hover:bg-blue-800 shadow-md hover:shadow-lg"
@@ -126,7 +126,7 @@ const ContactUsForm = () => {
               <FaFacebook className="text-white" />
             </a>
             <a
-              href="https://www.twitter.com"
+              href="https://www.twitter.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
               target="_blank"
               rel="noopener noreferrer"
               className="lg:p-3 p-1 rounded-xl bg-brown transition-colors duration-300 ease-out hover:bg-blue-500 shadow-md hover:shadow-lg"
@@ -134,7 +134,7 @@ const ContactUsForm = () => {
               <FaTwitter className="text-white" />
             </a>
             <a
-              href="https://www.youtube.com"
+              href="https://www.youtube.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
               target="_blank"
               rel="noopener noreferrer"
               className="lg:p-3 p-1 rounded-xl bg-brown transition-colors duration-300 ease-out hover:bg-red-600 shadow-md hover:shadow-lg"
@@ -142,7 +142,7 @@ const ContactUsForm = () => {
               <FaYoutube className="text-white" />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1200"
               target="_blank"
               rel="noopener noreferrer"
               className="lg:p-3 p-1 rounded-xl bg-brown transition-colors duration-300 ease-out hover:bg-pink-500 shadow-md hover:shadow-lg"
@@ -150,7 +150,7 @@ const ContactUsForm = () => {
               <FaInstagram className="text-white" />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500"
               target="_blank"
               rel="noopener noreferrer"
               className="lg:p-3 p-1 rounded-xl bg-brown transition-colors duration-300 ease-out hover:bg-blue-700 shadow-md hover:shadow-lg"
@@ -158,7 +158,7 @@ const ContactUsForm = () => {
               <FaLinkedin className="text-white" />
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=1234567890"
+              href="https://api.whatsapp.com/send?phone=1234567890"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1700"
               target="_blank"
               rel="noopener noreferrer"
               className="lg:p-3 p-1 rounded-xl bg-brown transition-colors duration-300 ease-out hover:bg-green-600 shadow-md hover:shadow-lg"
@@ -169,11 +169,11 @@ const ContactUsForm = () => {
         </div>
         {/* Line */}
         <div>
-          <div className="h-4/5 w-0 border border-lin"></div>
+          <div className="h-4/5 w-0 border border-lin"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"></div>
         </div>
         {/* Form */}
         <div className="lg:w-1/2 p-5">
-          <div className="lg:flex flex-row justify-between p-5">
+          <div className="lg:flex flex-row justify-between p-5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
             {/* Left side */}
             <form className="w-full p-1">
               {/* Name */}
@@ -253,7 +253,7 @@ const ContactUsForm = () => {
           </div>
 
           {/* Address and Message */}
-          <div className="p-5 space-y-20">
+          <div className="p-5 space-y-20"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
             {/* Address */}
             <div className="relative z-0 w-full mb-5 group">
               <input
@@ -290,7 +290,7 @@ const ContactUsForm = () => {
           </div>
 
           {/* Submit button */}
-          <div className="text-end p-5">
+          <div className="text-end p-5"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
             <button
               type="submit"
               className="justify-between poppins-light hover:bg-yellow hover:text-brown bg-brown p-2 px-3 rounded-md text-white"
@@ -303,7 +303,7 @@ const ContactUsForm = () => {
 
       {/* Line */}
       <div>
-        <div className="h-0 w-full border border-lin"></div>
+        <div className="h-0 w-full border border-lin"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000"></div>
       </div>
     </div>
   );

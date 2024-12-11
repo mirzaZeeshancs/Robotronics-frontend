@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="lg:w-1/4 md:w-1/3 w-1/2">
           <button
             className="flex lg:w-12 lg:h-12 md:h-8 md:w-8 h-6 w-6 top-btn border border-white rounded-full"
-            data-aos="fade-up"
+            data-aos="fade-right" data-aos-duration="2000"
             onClick={goToTop}
           >
             <a>
@@ -46,7 +46,7 @@ const Footer = () => {
         <div className="text-left">
           <p
             className="text-black text-wrap font-black lg:text-8xl md:text-6xl text-4xl custom-outline"
-            data-aos="fade-up"
+           data-aos="fade-down" data-aos-duration="2000"
           >
             ROBOTRONICS
           </p>
@@ -56,7 +56,7 @@ const Footer = () => {
       <footer className="text-white body-font">
         <div className="container p-4 mx-auto">
           <div className="flex flex-wrap justify-between lg:text-center md:text-center text-left">
-            <div className="lg:w-1/2 flex p-10" >
+            <div className="lg:w-1/2 flex p-10" data-aos="fade-right" data-aos-duration="2000">
               {/* Quick Links */}
               <div className="w-1/2 text-wrap text-left">
                 <h2 className="title-font font-medium poppins-semibold text-gold lg:text-xl tracking-widest">
@@ -137,7 +137,7 @@ const Footer = () => {
             </div>
 
             {/* Search & App Buttons */}
-            <div className="flex flex-col justify-center w-full lg:w-1/2 px-4">
+            <div className="flex flex-col justify-center w-full lg:w-1/2 px-4"data-aos="fade-left" data-aos-duration="2000">
               {/* Subscribe Section */}
               <div className="flex flex-col lg:flex-row items-center lg:items-start mb-4 space-y-4 lg:space-y-0 lg:space-x-4">
                 <div className="relative w-full">
@@ -183,14 +183,14 @@ const Footer = () => {
 
                   {/* App Store Buttons */}
                   <div className="flex flex-col gap-y-3">
-                    <button className="border border-white p-4 rounded-xl flex items-center space-x-2 hover:bg-gray-800 transition-colors duration-200" data-aos="fade-up">
+                    <button className="border border-white p-4 rounded-xl flex items-center space-x-2 hover:bg-gray-800 transition-colors duration-200"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
                       <img className="h-11 w-10" src={apple} alt="apple" />
                       <div className="text-white">
                         <p className="text-sm text-wrap">Download on the</p>
                         <p className="text-2xl text-wrap font-bold">APP STORE</p>
                       </div>
                     </button>
-                    <button className="border border-white p-4 rounded-xl flex items-center space-x-2 hover:bg-gray-800 transition-colors duration-200" data-aos="fade-up">
+                    <button className="border border-white p-4 rounded-xl flex items-center space-x-2 hover:bg-gray-800 transition-colors duration-200" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
                       <img className="h-11 w-10" src={pstore} alt="play-store" />
                       <div className="text-white">
                         <p className="text-sm text-wrap ">Download on the</p>

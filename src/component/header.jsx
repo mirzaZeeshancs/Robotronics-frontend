@@ -38,7 +38,7 @@ export default function Header() {
     <header className="text-gray-600 bg-white body-font rounded-md">
       <div className="container mx-auto flex flex-wrap items-center justify-between p-5">
         {/* Logo */}
-        <a href="/" className="flex items-center">
+        <a href="/" className="flex items-center"data-aos="fade-right" data-aos-duration="2000">
           <img src={logo} alt="logo" className="w-20 h-20" />
           <h1 className="text-xs poppins-bold">
             ROBOTRONICS
@@ -48,7 +48,7 @@ export default function Header() {
         </a>
 
         {/* Navigation */}
-        <nav className="hidden md:flex md:items-center md:w-auto">
+        <nav className="hidden md:flex md:items-center md:w-auto"data-aos="fade-down" data-aos-duration="2000">
           <div className="flex space-x-6 flex-row">
             <NavLink
               className="mr-3 cursor-pointer poppins-light hover:text-shadow-md hover:text-black hover:border-b hover:border-black text-black text-lg transition duration-300"
@@ -115,7 +115,7 @@ export default function Header() {
         </nav>
 
         {/* User Actions */}
-        <nav className="hidden md:flex md:items-center md:w-auto">
+        <nav className="hidden md:flex md:items-center md:w-auto"data-aos="fade-left" data-aos-duration="2000">
           <div className="flex gap-x-2 items-center">
             {token ? (
               <>
@@ -169,7 +169,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="block md:hidden border border-transparent rounded-md p-2"
+          className="block md:hidden border border-transparent rounded-md p-2"data-aos="fade-left" data-aos-duration="2000"
           onClick={toggleMenu}
         >
           <svg

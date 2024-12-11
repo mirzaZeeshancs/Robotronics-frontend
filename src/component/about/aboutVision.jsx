@@ -7,8 +7,8 @@ const AboutVision = () => {
       {/* block 1 */}
       <div className="lg:flex flex-row lg:p-10 p-4 lg:justify-between items-center ">
         {/* div 1 */}
-        <div className="flex-1 flex flex-row p-2 ">
-          <img className="lg:h-20 lg:w-20 h-10 w-10 px-2 " src={mission} />
+        <div className="flex-1 flex flex-row p-2 "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+          <img className="lg:h-20 lg:w-20 h-10 w-10 px-2 "data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000" src={mission} />
           <div>
             <p className="text-white lg:pb-4 pb-2 text-bold poppins-semibold lg:text-4xl text-2xl">MISSION</p>
             <p className="text-wrap poppins-light text-white text-sm">
@@ -26,8 +26,8 @@ const AboutVision = () => {
             </p>
           </div>
         </div>
-        <div className="flex-1 flex flex-row p-2">
-          <img className="lg:h-20 lg:w-20 h-10 w-10 px-2" src={vision} />
+        <div className="flex-1 flex flex-row p-2"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+          <img className="lg:h-20 lg:w-20 h-10 w-10 px-2"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000" src={vision} />
           <div>
             <p className="text-white lg:pb-4 pb-2 text-bold poppins-semibold lg:text-4xl text-2xl">VISION</p>
             <p className="text-wrap text-white poppins-light text-sm">
@@ -50,7 +50,7 @@ const AboutVision = () => {
       <div className="lg:flex lg:p-16 p-8 flex-row justify-between items-center ">
         <div>
           <blockquote>
-            <p className="lg:text-2xl text-sm italic poppins-light text-wrap font-medium text-white dark:text-white">
+            <p className="lg:text-2xl text-sm italic poppins-light text-wrap font-medium text-white dark:text-white"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
               At Everyday Robots, we are building machines to learn and operate
               alongside us.Given our progress so far,I am confident helper robots
               will add tremendous value to society.They will work alongside us,
@@ -60,9 +60,9 @@ const AboutVision = () => {
           </blockquote>
         </div>
         <div className="p-2" >
-          <img className="" src={quote} />
-          <p className="lg:text-2xl text-xl text-gold poppins-light" >Peter Nammy</p>
-          <p className="text-white  poppins-light" >Robotics Engineer</p>
+          <img className=""data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000" src={quote} />
+          <p className="lg:text-2xl text-xl text-gold poppins-light"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000" >Peter Nammy</p>
+          <p className="text-white  poppins-light"data-aos="fade-left" data-aos-duration="3000" data-aos-delay="6000" >Robotics Engineer</p>
         </div>
       </div>
     </div>

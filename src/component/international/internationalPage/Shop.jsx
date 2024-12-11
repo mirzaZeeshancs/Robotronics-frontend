@@ -75,8 +75,8 @@ const Shop = () => {
     <div>
       {/* intro */}
       <div className="p-5 flex flex-wrap w-full">
-        <div className="flex justify-between lg:px-8" data-aos="fade-up">
-          <div className="flex lg:w-1/2 ">
+        <div className="flex justify-between lg:px-8">
+          <div className="flex lg:w-1/2 "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
             <img src={robo} />
             <div className=" content-center text-wrap text-brown text-2xl md:text-5xl poppins-bold">
               Upcoming{" "}
@@ -87,7 +87,7 @@ const Shop = () => {
             </div>
           </div>
           {/* Two circular buttons on the right  */}
-          <div className="flex self-center gap-x-2">
+          <div className="flex self-center gap-x-2"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
             <button className="flex lg:w-20 w-10 h-10 lg:h-20 justify-center items-center rounded-full border border-black ">
               <FaArrowLeft className="text-yellow" />
             </button>
@@ -102,7 +102,7 @@ const Shop = () => {
         {courses.map((course) => (
           <div
             key={course.id}
-            className="max-w-sm rounded overflow-hidden p-2 shadow-lg bg-white "
+            className="max-w-sm rounded overflow-hidden p-2 shadow-lg bg-white "data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"
           >
             <img className="w-full" src={course.image} alt="Course" />
             <div className="lg:px-6 py-4">

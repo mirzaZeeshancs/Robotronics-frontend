@@ -44,12 +44,12 @@ const Event = () => {
 
   return (
     <div className="flex flex-row bg-background p-5">
-      <h2 className="w-1/5 text-left lg:px-10 items-center lg:text-6xl text-2xl text-wrap text-brown poppins-bold">
+      <h2 className="w-1/5 text-left lg:px-10 items-center lg:text-6xl text-2xl text-wrap text-brown poppins-bold"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
         Upcoming Events
       </h2>
       <div className="flex flex-row  space-x-4">
         {/* button */}
-        <div className="flex flex-row space-x-4 items-end ">
+        <div className="flex flex-row space-x-4 items-end "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
           <div className="bg-background border border-brown h-8 w-8 rounded-full ">
             <button
               onClick={prevSlide}
@@ -68,7 +68,7 @@ const Event = () => {
           </div>
         </div>
         {/* images */}
-        <div className="flex lg:space-x-5 ">
+        <div className="flex lg:space-x-5 "data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
           {events.map((event, index) => (
             <div
               key={event.id}

@@ -62,7 +62,7 @@ const Login = () => {
         <Header />
       </div>
       <div>
-        <div className="flex flex-col lg:space-y-4 space-y-1 items-center justify-center lg:py-20 py-10">
+        <div className="flex flex-col lg:space-y-4 space-y-1 items-center justify-center lg:py-20 py-10"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
           <p className="text-center text-wrap justify-center lg:py-10 py-5 text-4xl poppins-bold text-brown">
             Log in to your account
           </p>
@@ -80,7 +80,7 @@ const Login = () => {
           </button>
         </div>
         {/* or */}
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row justify-center items-center"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
           <div className="h-0 lg:w-52 w-44 border border-line"></div>
           <p className="text-xl font-bold p-2">OR</p>
           <div className="h-0 lg:w-52 w-44 border border-line"></div>
@@ -88,7 +88,7 @@ const Login = () => {
         {/* inputs */}
         <form
           onSubmit={handleLogin}
-          className="flex flex-col items-center space-y-3"
+          className="flex flex-col items-center space-y-3"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"
         >
           <div className="lg:py-8 py-4">
             <p className="text-sm poppins-regular ">Email address</p>

@@ -25,15 +25,15 @@ const CareerJoinTeam = () => {
     <div className="bg-gray p-5 ">
       {/* text */}
       <div className="p-10">
-        <p className="text-2xl poppins-bold text-brown ">
+        <p className="text-2xl poppins-bold text-brown "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
           Are you looking for a new career opportunity?
         </p>
-        <p className="text-5xl text-brown poppins-extrabold ">jon the A-Team!</p>
+        <p className="text-5xl text-brown poppins-extrabold "data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">jon the A-Team!</p>
       </div>
       {/* img */}
       <div className="lg:flex flex-row p-10 space-x-8">
-        <img src={img3} alt="" />
-        <p className="text-xl text-brown poppins-regular text-wrap py-10">
+        <img src={img3} alt="" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"/>
+        <p className="text-xl text-brown poppins-regular text-wrap py-10"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
           The average employment period in our company is currently 4,5 years.
           Our People have the opportunity to work in a relaxed and friendly
           environment, with to industry partners on the most significant
@@ -61,13 +61,13 @@ const CareerJoinTeam = () => {
             )}
 
             {/* Job Content */}
-            <div className="flex-1 mb-2">
+            <div className="flex-1 mb-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
               <span className="poppins-bold">Position:</span> {job.position}
             </div>
-            <div className="flex-1 mb-2">
+            <div className="flex-1 mb-2"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
               <span className="poppins-bold">Experience:</span> {job.experience}
             </div>
-            <div className="flex-1 mb-2">
+            <div className="flex-1 mb-2"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
               <span className="poppins-bold">Location:</span> {job.location}
             </div>
           </div>

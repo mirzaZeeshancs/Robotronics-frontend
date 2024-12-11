@@ -34,10 +34,10 @@ const Intro = () => {
         <div className="p-5">
           <Header />
         </div>
-        <div className="space-y-5" data-aos="fade-up">
+        <div className="space-y-5" >
           {/* As a School & Parent */}
           <div className="w-full flex justify-center">
-            <div className=" relative inline-block text-left">
+            <div className=" relative inline-block text-left"data-aos="fade-up" data-aos-duration="2000">
               <button
                 type="button"
                 className="inline-flex justify-between w-full rounded-md hover:bg-brown hover:border-brown border border-lin shadow-sm px-4 py-2 bg-dropbox poppins-regular text-gray hover:text-gold"
@@ -69,9 +69,9 @@ const Intro = () => {
           </div>
           <div className="flex justify-between w-full p-10">
             {/* text */}
-            <div className="space-y-5 pt-32 lg:w-1/2 ">
+            <div className="space-y-5 pt-32 lg:w-1/2 "data-aos="fade-right" data-aos-duration="2000">
               {/* Text */}
-              <div className="space-y-2">
+              <div className="space-y-2"data-aos="fade-right" data-aos-duration="2000">
                 <div className="flex flex-row space-x-2">
                   <h1 className="lg:text-3xl md:text-2xl text-white poppins-thin">
                     WELCOME TO THE{" "}
@@ -96,7 +96,7 @@ const Intro = () => {
                 </p>
               </div>
               {/* button */}
-              <div className="space-x-3">
+              <div className="space-x-3"data-aos="fade-right" data-aos-duration="2000">
                 <button
                   to="section2"
                   offset={-70}
@@ -115,7 +115,7 @@ const Intro = () => {
               {/* socil icons */}
               <div className="flex flex-row space-x-2  lg:space-x-5">
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com"data-aos="fade-up" data-aos-duration="2000"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -123,7 +123,7 @@ const Intro = () => {
                   <FaFacebook className="text-brown" />
                 </a>
                 <a
-                  href="https://www.twitter.com"
+                  href="https://www.twitter.com" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border   border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -131,7 +131,7 @@ const Intro = () => {
                   <FaTwitter className="text-brown" />
                 </a>
                 <a
-                  href="https://www.youtube.com"
+                  href="https://www.youtube.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -139,7 +139,7 @@ const Intro = () => {
                   <FaYoutube className="text-brown" />
                 </a>
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1200"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -147,7 +147,7 @@ const Intro = () => {
                   <FaInstagram className="text-brown" />
                 </a>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -155,7 +155,7 @@ const Intro = () => {
                   <FaLinkedin className="text-brown" />
                 </a>
                 <a
-                  href="https://api.whatsapp.com/send?phone=1234567890"
+                  href="https://api.whatsapp.com/send?phone=1234567890"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1700"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -165,7 +165,7 @@ const Intro = () => {
               </div>
             </div>
             {/* img */}
-            <div className="hidden md:block ">
+            <div className="hidden md:block "data-aos="fade-left" data-aos-duration="2000">
               <img alt="card img" src={Robort} className="w-full" />
             </div>
           </div>

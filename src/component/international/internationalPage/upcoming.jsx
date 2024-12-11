@@ -76,38 +76,38 @@ const Upcoming = () => {
         <div className="lg:w-1/2 p-5  bg-background">
           <div className="bg-background space-y-8 lg:px-20 md:p-8 lg:p-10 rounded-xl">
             <div className="flex" >
-            <div className="w-1/5 h-0 items-center text-yellow text-center border broder-yellow " ></div>
-            <h3 className="text-yellow text-xl poppins-light">Python Seminar</h3>
+            <div className="w-1/5 h-0 items-center text-yellow text-center border broder-yellow " data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000"></div>
+            <h3 className="text-yellow text-xl poppins-light"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">Python Seminar</h3>
             </div>
-            <h1 className="lg:text-6xl text-2xl text-brown poppins-bold">Javascript</h1>
-            <h1 className="lg:text-6xl text-2xl text-brown poppins-bold">Conference 2024</h1>
+            <h1 className="lg:text-6xl text-2xl text-brown poppins-bold"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">Javascript</h1>
+            <h1 className="lg:text-6xl text-2xl text-brown poppins-bold"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">Conference 2024</h1>
             <div className="flex lg:text-6xl  text-3xl poppins-bold text-brown justify-between">
               <div>
                 {timeLeft.days || "0"}
-                <span className="block lg:text-2xl text-xl poppins-bold text-brown">
+                <span className="block lg:text-2xl text-xl poppins-bold text-brown"data-aos="fade-up" data-aos-duration="2000">
                   Days
                 </span>
               </div>
               <div>
                 {timeLeft.hours || "0"}
-                <span className="block lg:text-2xl text-xl poppins-bold text-brown">
+                <span className="block lg:text-2xl text-xl poppins-bold text-brown"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
                   Hours
                 </span>
               </div>
               <div>
                 {timeLeft.minutes || "0"}
-                <span className="block lg:text-2xl text-xl poppins-bold text-brown">
+                <span className="block lg:text-2xl text-xl poppins-bold text-brown"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
                   Mins
                 </span>
               </div>
               <div>
                 {timeLeft.seconds || "0"}
-                <span className="block lg:text-2xl text-xl poppins-bold text-brown">
+                <span className="block lg:text-2xl text-xl poppins-bold text-brown"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1200">
                   Secs
                 </span>
               </div>
             </div>
-            <div className="flex bg-lin p-4 rounded-xl space-x-4">
+            <div className="flex bg-lin p-4 rounded-xl space-x-4"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
               <input
                 type="email"
                 className="w-full p-2 border rounded"
@@ -126,11 +126,11 @@ const Upcoming = () => {
               {speakers.map((speaker) => (
                 <div key={speaker.id} className="p-5">
                   <img
-                    className="rounded-xl w-full object-cover object-center"
+                    className="rounded-xl w-full object-cover object-center"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000"
                     src={speaker.image}
                     alt={speaker.name}
                   />
-                  <h3 className="text-center text-lg poppins-bold mt-4">
+                  <h3 className="text-center text-lg poppins-bold mt-4"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
                     {speaker.name}
                   </h3>
                 </div>
