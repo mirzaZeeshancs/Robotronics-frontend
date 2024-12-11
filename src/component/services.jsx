@@ -44,10 +44,10 @@ const Services = () => {
   ];
 
   return (
-    <div className="services" id="services">
-      <div className=" flex justify-between items-start">
+    <div className="services" id="services"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
+      <div className=" flex justify-between items-start"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
         {/* Left div for text */}
-        <div className="flex justify-start lg:p-10 p-2" data-aos="fade-up">
+        <div className="flex justify-start lg:p-10 p-2" >
           <div className="p-5 pt-10">
             <div className="flex flex-row space-x-3">
               <p className="text-white lg:text-6xl font-bold poppins-black text-2xl ">
@@ -63,14 +63,14 @@ const Services = () => {
           </div>
           {/* Right div for image */}
           <div className="flex ">
-            <img src={robort} alt="image" />
+            <img src={robort} alt="image"data-aos="fade-right" data-aos-duration="2000" />
           </div>
         </div>
       </div>
       {/* Second layer: Shop items */}
-      <div className="px-4 py-8">
+      <div className="px-4 py-8"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
         {/* Flex container with wrapping */}
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 sm:gap-8 lg:gap-12">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 sm:gap-8 lg:gap-12"data-aos="fade-up" data-aos-duration="2000" >
           {items.map((item, index) => (
             <div
               key={index}
@@ -104,7 +104,7 @@ const Services = () => {
         </div>
       </div>
       {/* Third layer: Image and circular buttons  */}
-      <div className="flex justify-between px-4">
+      <div className="flex justify-between px-4"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"  >
         {/* Image on the left  */}
         <img className="" src={img4} alt="image" />
         {/* Two circular buttons on the right  */}

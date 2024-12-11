@@ -3,10 +3,10 @@ const QuickContact = () => {
   return (
     <div className="bg-background">
       <div className="flex p-10">
-        <div className="flex-1  hidden md:block">
+        <div className="flex-1  hidden md:block"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
           <img src={img} className="" alt="" />
         </div>
-        <div className="lg:px-32 flex-1">
+        <div className="lg:px-32 flex-1"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
           {/* text */}
           <div>
             <h1 className="text-4xl text-left poppins-bold text-brown">

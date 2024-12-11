@@ -30,7 +30,7 @@ const Intro = () => {
       <div className="p-5 ">
         <Header />
       </div>
-      <div className="space-y-5">
+      <div className="space-y-5"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
           {/* As a School & Parent */}
           <div className="w-full flex justify-center">
           <div className=" relative inline-block text-left">
@@ -65,15 +65,15 @@ const Intro = () => {
           <div className="space-y-5 lg:p-10 p-4 lg:px-24 lg:w-1/2 ">
             {/* Text */}
             <div className="space-y-2">
-              <div className="flex flex-row space-x-2">
+              <div className="flex flex-row space-x-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
                 <h1 className="lg:text-3xl poppins-extralight text-white">WELCOME TO THE </h1>
                 <h1 className="lg:text-3xl poppins-bold text-white font-bold">WORLD OF</h1>
               </div>
-              <div className="flex">
+              <div className="flex"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
                 <p className="lg:text-8xl text-4xl poppins-bold text-yellow">RO</p>
                 <p className="lg:text-8xl text-4xl poppins-bold text-white">BOTRONICS</p>
               </div>
-              <p className="text-wrap text-sm poppins-extralight text-white">
+              <p className="text-wrap text-sm poppins-extralight text-white"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Necessitatibus consequuntur aliquid fugit in recusandae velit
                 quas soluta libero, sint modi obcaecati ad minus quibusdam iusto
@@ -100,7 +100,7 @@ const Intro = () => {
             {/* socil icons */}
             <div className="flex flex-row space-x-5">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com"data-aos="fade-up" data-aos-duration="2000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -108,7 +108,7 @@ const Intro = () => {
                 <FaFacebook className="text-brown" />
               </a>
               <a
-                href="https://www.twitter.com"
+                href="https://www.twitter.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border   border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -116,7 +116,7 @@ const Intro = () => {
                 <FaTwitter className="text-brown" />
               </a>
               <a
-                href="https://www.youtube.com"
+                href="https://www.youtube.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -124,7 +124,7 @@ const Intro = () => {
                 <FaYoutube className="text-brown" />
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1200"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -132,7 +132,7 @@ const Intro = () => {
                 <FaInstagram className="text-brown" />
               </a>
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -140,7 +140,7 @@ const Intro = () => {
                 <FaLinkedin className="text-brown" />
               </a>
               <a
-                href="https://api.whatsapp.com/send?phone=1234567890"
+                href="https://api.whatsapp.com/send?phone=1234567890"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1700"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"

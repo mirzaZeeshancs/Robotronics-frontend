@@ -30,20 +30,20 @@ const Shopsearch = () => {
       <div className="flex-1 ">
         <div>
           {/* line 1 */}
-          <div className="lg:pt-16 pt-8">
+          <div className="lg:pt-16 pt-8"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
             <div className="h-0 w-full border border-lin"></div>
           </div>
           <div className="lg:flex md:flex lg:px-24 px-2 lg:pt-10 pt-5  justify-between items-center ">
             <div className="flex justify-between  w-full">
               <div className="flex">
-                <IoHomeOutline className="h-5" />
-                <p className="px-3 lg:text-base poppins-bold  text-sm ">
+                <IoHomeOutline className="h-5" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"/>
+                <p className="px-3 lg:text-base poppins-bold  text-sm "data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
                   Main Page
                 </p>
               </div>
             </div>
 
-            <div className="w-2/3 flex justify-between space-x-5">
+            <div className="w-2/3 flex justify-between space-x-5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
               <div className="flex justify-between  w-full">
                 <div className="flex">
                   <FaHeart className="h-6" />
@@ -66,12 +66,12 @@ const Shopsearch = () => {
             </div>
           </div>
           {/* line 2 */}
-          <div className=" lg:pt-10 pt-5">
+          <div className=" lg:pt-10 pt-5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
             <div className="h-0 w-full border border-lin"></div>
           </div>
         </div>
         {/* search-bars */}
-        <div className="lg:flex flex-row ">
+        <div className="lg:flex flex-row "data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
           <div className="flex lg:text-4xl text-xl text-bold poppins-regular lg:w-1/5 self-center">
             Category
           </div>
@@ -106,7 +106,7 @@ const Shopsearch = () => {
         </div>
       </div>
       {/* block 2 */}
-      <div className="flex-1">
+      <div className="flex-1"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
         {/* parent */}
         <div className="flex ">
           <Shopfilter />
@@ -134,7 +134,7 @@ const Shopsearch = () => {
         </div>
         <div className="lg:flex flex-row justify-between lg:p-5">
           {/* buttons */}
-          <div className="flex ">
+          <div className="flex "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
             <div className="p-1">
               <button className="p-1 px-3 bg-white lg:text-base text-sm hover:bg-gold ">
                 1
@@ -157,7 +157,7 @@ const Shopsearch = () => {
             </div>
           </div>
           {/* text */}
-          <div className="flex ">
+          <div className="flex "data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
             <p className="lg:text-base poppins-medium text-sm">
               SHOWED 1 - 9 OF 30 PRODUCTS
             </p>

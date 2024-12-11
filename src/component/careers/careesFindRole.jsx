@@ -12,11 +12,11 @@ const CareesFindRole = () => {
     <div className="flex flex-row justify-between lg:p-10 p-5  lg:px-20">
       {/* text */}
       <div className="flex flex-col py-10 justify-between">
-        <p className="text-wrap poppins-light text-brown text-5xl ">
+        <p className="text-wrap poppins-light text-brown text-5xl "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
           Cant find a role <br />
           for you?
         </p>
-        <div className="space-x-5">
+        <div className="space-x-5"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
           <button className="border lg:text-2xl poppins-light border-brown p-3 rounded-full">
             Send your Resume
           </button>
@@ -28,7 +28,7 @@ const CareesFindRole = () => {
       {/* socil icons */}
       <div className="flex flex-col justify-between space-y-5">
         <a
-          href="https://www.facebook.com"
+          href="https://www.facebook.com"data-aos="fade-left" data-aos-duration="2000"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 border border-brown rounded-xl hover:bg-brown hover:text-white"
@@ -36,7 +36,7 @@ const CareesFindRole = () => {
           <FaFacebook className="text-gray-800" />
         </a>
         <a
-          href="https://www.twitter.com"
+          href="https://www.twitter.com"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 border border-brown rounded-xl hover:bg-brown hover:text-white"
@@ -44,7 +44,7 @@ const CareesFindRole = () => {
           <FaTwitter className="text-gray-800" />
         </a>
         <a
-          href="https://www.youtube.com"
+          href="https://www.youtube.com"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="800"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 border border-brown rounded-xl hover:bg-brown hover:text-white"
@@ -52,7 +52,7 @@ const CareesFindRole = () => {
           <FaYoutube className="text-gray-800" />
         </a>
         <a
-          href="https://www.instagram.com"
+          href="https://www.instagram.com"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1200"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 border border-brown rounded-xl hover:bg-brown hover:text-white"
@@ -60,7 +60,7 @@ const CareesFindRole = () => {
           <FaInstagram className="text-gray-800" />
         </a>
         <a
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1500"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 border border-brown rounded-xl hover:bg-brown hover:text-white"
@@ -68,7 +68,7 @@ const CareesFindRole = () => {
           <FaLinkedin className="text-gray-800" />
         </a>
         <a
-          href="https://api.whatsapp.com/send?phone=1234567890"
+          href="https://api.whatsapp.com/send?phone=1234567890"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1700"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 border border-brown rounded-xl hover:bg-brown hover:text-white"

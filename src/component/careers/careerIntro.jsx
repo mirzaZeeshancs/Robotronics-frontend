@@ -14,8 +14,8 @@ const CareerIntro = () => {
           <Header />
         </div>
         <div
-          className="absolute bottom-24 flex flex-col justify-end p-5 overflow-hidden w-full"
-          data-aos="fade-left"
+          className="absolute bottom-24 flex flex-col justify-end p-5 overflow-hidden w-full"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"
+          
         >
           {/* text */}
           <h1 className="lg:text-7xl text-5xl poppins-extrabold py-5 text-white">

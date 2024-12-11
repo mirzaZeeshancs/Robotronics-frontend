@@ -23,12 +23,12 @@ const Iaboutntro = () => {
         <div className="m-5">
           <Header />
         </div>
-        <div className="overflow-hidden" data-aos="fade-left">
+        <div className="overflow-hidden" >
         <div className="flex justify-between w-full p-10">
             {/* text */}
             <div className="space-y-5 pt-32 lg:w-1/2 ">
               {/* Text */}
-              <div className="space-y-2">
+              <div className="space-y-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
                 <div className="flex flex-row space-x-2">
                   <h1 className="lg:text-3xl md:text-2xl text-white poppins-thin">WELCOME TO THE </h1>
                   <h1 className="lg:text-3xl md:text-2xl text-white poppins-extralight">WORLD OF</h1>
@@ -44,7 +44,7 @@ const Iaboutntro = () => {
                 </p>
               </div>
               {/* button */}
-              <div className="space-x-3">
+              <div className="space-x-3"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
                 <button
                   to="section2"
                   offset={-70}
@@ -63,7 +63,7 @@ const Iaboutntro = () => {
               {/* socil icons */}
               <div className="flex flex-row space-x-2  lg:space-x-5">
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com"data-aos="fade-up" data-aos-duration="2000"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -71,7 +71,7 @@ const Iaboutntro = () => {
                   <FaFacebook className="text-brown" />
                 </a>
                 <a
-                  href="https://www.twitter.com"
+                  href="https://www.twitter.com" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border   border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -79,7 +79,7 @@ const Iaboutntro = () => {
                   <FaTwitter className="text-brown" />
                 </a>
                 <a
-                  href="https://www.youtube.com"
+                  href="https://www.youtube.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -87,7 +87,7 @@ const Iaboutntro = () => {
                   <FaYoutube className="text-brown" />
                 </a>
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1200"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -95,7 +95,7 @@ const Iaboutntro = () => {
                   <FaInstagram className="text-brown" />
                 </a>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -103,7 +103,7 @@ const Iaboutntro = () => {
                   <FaLinkedin className="text-brown" />
                 </a>
                 <a
-                  href="https://api.whatsapp.com/send?phone=1234567890"
+                  href="https://api.whatsapp.com/send?phone=1234567890"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1700"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"

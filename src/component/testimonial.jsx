@@ -1,4 +1,4 @@
- import { useEffect } from "react"
+import { useEffect } from "react"
 import ceo1 from "../assets/images/ceo1.svg"
  import ceo2 from "../assets/images/ceo2.svg"
  import ceo3 from "../assets/images/ceo3.svg" 
@@ -19,12 +19,12 @@ const Testimonial = () => {
     <div className="flex flex-col" >
       {/* layer 1 */}
       <div className="lg:flex justify-center content-center lg:pt-20 p-5" >
-        <p className="text-brown lg:text-6xl text-2xl poppins-semibold m-5 justify-center items-center " data-aos="fade-up" >Are my clients happy?</p>
+        <p className="text-brown lg:text-6xl text-2xl poppins-semibold m-5 justify-center items-center "data-aos="fade-down" data-aos-duration="2000" >Are my clients happy?</p>
         </div>
       {/* layer 2 */}
       <div className="  flex w-full justify-between lg:gap-5 gap-2 p-2 lg:p-5">
         {/* block 1 */}
-        <div className="flex-1 lg:space-y-4 space-y-2 "> 
+        <div className="flex-1 lg:space-y-4 space-y-2 "data-aos="fade-right" data-aos-duration="2000"> 
         {/* div 1 */}
         <div className="flex  flex-col justify-center border border-gray rounded-2xl content-center ">
          <img className="flex " src={ceo1}/>
@@ -48,7 +48,7 @@ const Testimonial = () => {
         </div>
         </div>
         {/* block 2 */}
-        <div className="flex-1 flex flex-col justify-between lg:space-y-4">
+        <div className="flex-1 flex flex-col justify-between lg:space-y-4"data-aos="fade-up" data-aos-duration="2000">
           {/* div 1 */}
           <div className="lg:flex  border border-gray rounded-2xl ">
               <img className="flex w-full" src={ceo2}/>
@@ -95,7 +95,7 @@ const Testimonial = () => {
           </div>
         </div>
         {/* block 3 */}
-        <div className="flex-1 lg:space-y-4 " > 
+        <div className="flex-1 lg:space-y-4 " data-aos="fade-left" data-aos-duration="2000"> 
         {/* div 1 */}
         <div className="flex p-5 border border-gray rounded-2xl">
           {/* image */}

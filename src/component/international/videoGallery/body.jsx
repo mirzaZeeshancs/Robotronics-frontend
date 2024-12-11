@@ -110,13 +110,13 @@ const Intro = () => {
       <div className="flex flex-wrap md:flex-nowrap md:space-x-6">
         {/* Sidebar */}
         <div className="p-5 md:w-1/6 mb-6 md:mb-0">
-          <h2 className="font-bold text-3xl poppins-bold text-brown mb-4">Workshops</h2>
-          <h2 className="border border-brown w-1/3 h-2 rounded-md bg-brown mb-4"></h2>
+          <h2 className="font-bold text-3xl poppins-bold text-brown mb-4"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">Workshops</h2>
+          <h2 className="border border-brown w-1/3 h-2 rounded-md bg-brown mb-4"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000"></h2>
           <div>
-            <h3 className="poppins-medium text-brown text-lg mb-2">
+            <h3 className="poppins-medium text-brown text-lg mb-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
               Robotics Workshop
             </h3>
-            <ul className="space-y-1">
+            <ul className="space-y-1"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
               <li className="text-gray-600 poppins-light hover:text-brown text-lin cursor-pointer">
                 Batch 01
               </li>
@@ -129,10 +129,10 @@ const Intro = () => {
             </ul>
           </div>
           <div className="mt-4">
-            <h3 className="poppins-medium text-brown text-lg mb-2">
+            <h3 className="poppins-medium text-brown text-lg mb-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
               EV3 Workshop
             </h3>
-            <ul className="space-y-1">
+            <ul className="space-y-1"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
               <li className="text-gray-600 poppins-light hover:text-brown text-lin cursor-pointer">
                 Batch 01
               </li>
@@ -150,32 +150,32 @@ const Intro = () => {
         <div className="w-full md:w-3/4">
           <div className="flex flex-wrap md:flex-nowrap space-y-4 md:space-y-0 md:space-x-6 mb-6">
             <div className="w-full md:w-1/4">
-              <label className="block text-brown poppins-medium mb-2">
+              <label className="block text-brown poppins-medium mb-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
                 Date
               </label>
               <input
-                type="date"
+                type="date"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"
                 className="w-full p-2 border border-gray rounded"
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
               />
             </div>
             <div className="w-full md:w-1/4">
-              <label className="block text-brown poppins-medium  mb-2">
+              <label className="block text-brown poppins-medium  mb-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
                 School Name
               </label>
               <input
-                type="text"
+                type="text"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"
                 className="w-full p-2 border border-gray rounded"
                 value={selectedSchool}
                 onChange={(e) => setSelectedSchool(e.target.value)}
               />
             </div>
             <div className="w-full md:w-1/4">
-              <label className="block text-brown poppins-medium mb-2">
+              <label className="block text-brown poppins-medium mb-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
                 Select City
               </label>
-              <div className="relative">
+              <div className="relative"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
                 <select
                   className="w-full p-2 border border-gray rounded appearance-none"
                   value={selectedCity}
@@ -190,8 +190,8 @@ const Intro = () => {
               </div>
             </div>
             <div className="w-full md:w-1/4">
-              <label className="block poppins-medium mb-2">Sort by</label>
-              <div className="relative">
+              <label className="block poppins-medium mb-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">Sort by</label>
+              <div className="relative"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
                 <select
                   className="w-full p-2 border border-gray rounded appearance-none"
                   value={sortBy}
@@ -206,12 +206,12 @@ const Intro = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
             {workshopsData.map((workshop) => (
               <WorkshopCard key={workshop.id} workshop={workshop} />
             ))}
           </div>
-          <div className=" pt-10 w-1/3 bg-gray">
+          <div className=" pt-10 w-1/3 bg-gray"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
             <Pagination
               currentPage={currentPage}
               totalPages={totalPages}

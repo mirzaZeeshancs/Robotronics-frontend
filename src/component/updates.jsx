@@ -22,7 +22,7 @@ const Updates = () => {
         <div className="flex-1 text-white space-y-4">
           <p
             className="text-white px-4 lg:px-24 py-14 poppins-extrabold text-2xl lg:text-5xl "
-            data-aos="fade-up"
+            data-aos="fade-right" data-aos-duration="2000"
           >
             Latest Updates What&apos;s <br />
             <span className="block text-gold text-2xl lg:text-5xl poppins-extrabold">
@@ -30,7 +30,7 @@ const Updates = () => {
             </span>
           </p>
 
-          <h1 className="text-white text-wrap px-4 poppins-regular lg:px-24 text-sm lg:text-lg">
+          <h1 className="text-white text-wrap px-4 poppins-regular lg:px-24 text-sm lg:text-lg"data-aos="fade-right" data-aos-duration="2000">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
             accusamus sint similique laboriosam temporibus quas illo sit
             architecto. Alias nobis debitis ut obcaecati repudiandae totam.
@@ -38,7 +38,7 @@ const Updates = () => {
           </h1>
 
           <img
-            className="w-full px-4 lg:px-24 py-4 object-cover"
+            className="w-full px-4 lg:px-24 py-4 object-cover"data-aos="fade-up" data-aos-duration="2000"
             src={img1}
             alt="Cooking Image"
           />
@@ -46,12 +46,12 @@ const Updates = () => {
         {/* div 2 */}
         <div className="flex-1 text-white">
           {/* images */}
-          <div className="flex space-between justify-center" data-aos="fade-up">
+          <div className="flex space-between justify-center" data-aos="fade-down" data-aos-duration="2000">
             <img className="lg:h-40 lg:w-28 h-22 w-14" src={img6} />
             <img className="lg:h-40 lg:w-28 h-22 w-14 " src={img7} />
           </div>
           {/* text */}
-          <div className="space-y-2">
+          <div className="space-y-2"data-aos="fade-left" data-aos-duration="2000">
             <div className="text-wrap">
               <p className="text-white lg:text-2xl lg:p-3 text-xl font-bold text-wrap">
                 01
@@ -89,25 +89,25 @@ const Updates = () => {
       <div className="flex flex-wrap justify-center md:justify-between px-4 sm:px-6 md:px-10 pb-5">
         <img
           className="w-1/2 sm:w-1/3 md:w-1/4 p-2 sm:p-4 md:p-5 object-contain"
-          data-aos="fade-up"
+          data-aos="fade-down" data-aos-duration="2000"
           src={img2}
           alt="Image 1"
         />
         <img
           className="w-1/2 sm:w-1/3 md:w-1/4 p-2 sm:p-4 md:p-5 object-contain"
-          data-aos="fade-up"
+          data-aos="fade-up" data-aos-duration="2000"
           src={img3}
           alt="Image 2"
         />
         <img
           className="w-1/2 sm:w-1/3 md:w-1/4 p-2 sm:p-4 md:p-5 object-contain"
-          data-aos="fade-up"
+         data-aos="fade-down" data-aos-duration="2000"
           src={img4}
           alt="Image 3"
         />
         <img
           className="w-1/2 sm:w-1/3 md:w-1/4 p-2 sm:p-4 md:p-5 object-contain"
-          data-aos="fade-up"
+          data-aos="fade-up" data-aos-duration="2000"
           src={img3}
           alt="Image 2"
         />

@@ -43,7 +43,7 @@ const CourseProduct = ({
     <div className="p-2  " data-aos="fade-up">
       <div className="rounded-2xl p-2 bg-white">
         {/* img */}
-        <div className="">
+        <div className=""data-aos="fade-right">
           <img src={python} alt="" />
         </div>
         {/* title */}

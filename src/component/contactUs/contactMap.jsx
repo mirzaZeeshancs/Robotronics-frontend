@@ -30,7 +30,7 @@ const ContactMap = () => {
   }, []);
 
   return (
-    <div className='flex bg-background' >
+    <div className='flex bg-background'data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000" >
       <div className="lg:p-32 py-32 relative h-screen w-screen">
       <MapContainer center={[30.3753, 69.3451]} zoom={6} className="bg-map h-full w-full">
         <TileLayer
