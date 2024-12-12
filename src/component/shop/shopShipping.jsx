@@ -4,7 +4,7 @@ import mastercard from "../../assets/images/mastercard.svg";
 import ShopConfirmOrder from "./shopConfirmOrder";
 const ShopShipping = () => {
   return (
-    <div className="lg:flex flex-row lg:p-5 py-20  bg-gray">
+    <div className="lg:flex flex-row lg:p-5 py-20  bg-gray"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
       {/* left */}
       <ShopConfirmOrder />
       {/* line */}

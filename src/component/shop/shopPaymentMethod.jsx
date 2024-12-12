@@ -16,7 +16,7 @@ const ShopPaymentMethod = () => {
   return (
     <div className="lg:flex flex-row p-5 bg-gray">
       {/* left */}
-      <div className="lg:w-2/3">
+      <div className="lg:w-2/3"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
         {/* shipping services */}
         <div className="lg:px-10 px-4 space-y-20">
           <div className="space-y-5">
@@ -270,10 +270,10 @@ const ShopPaymentMethod = () => {
       </div>
       {/* line */}
       <div className="px-1">
-        <div className="h-full w-0 border border-lightgray"></div>
+        <div className="h-full w-0 border border-lightgray"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"></div>
       </div>
       {/* right */}
-      <div className=" lg:w-1/2">
+      <div className=" lg:w-1/2"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
         <CustomerOrder />
       </div>
     </div>

@@ -12,7 +12,7 @@ const CourseIntro = ({ title, id, image, price }) => {
     dispatch(addToCart({ id: id }));
   };
   return (
-    <div className="bg-lightgray">
+    <div className="bg-lightgray"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
       <div className="p-5 ">
         <Header />
       </div>
