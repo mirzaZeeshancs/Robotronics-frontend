@@ -46,12 +46,23 @@ const CareerTestimonials = () => {
     <div className="lg:flex flex-row justify-between bg-black p-5">
       {/* left */}
       <div>
-        <img src={image} alt="robot"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000" />
+        <img
+          src={image}
+          alt="robot"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-delay="4000"
+        />
       </div>
       {/* right */}
       <div className="lg:w-1/2 py-5">
         {/* text */}
-        <div className="flex flex-row content-center"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+        <div
+          className="flex flex-row content-center"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-delay="4000"
+        >
           {/* text */}
           <div className="flex flex-col justify-between lg:py-10 py-5">
             <div></div>
@@ -68,7 +79,12 @@ const CareerTestimonials = () => {
           </div>
         </div>
         {/* message */}
-        <div className="w-full bg-white rounded-xl"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+        <div
+          className="w-full bg-white rounded-xl"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          data-aos-delay="4000"
+        >
           <blockquote className="text-xl italic font-semibold text-gray-900 p-10 dark:text-white">
             <svg
               className="w-8 h-8 text-brown mb-4"
@@ -92,7 +108,12 @@ const CareerTestimonials = () => {
           </blockquote>
         </div>
         {/* name */}
-        <div className="py-5"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
+        <div
+          className="py-5"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-delay="4000"
+        >
           <p className="text-gold poppins-extralight text-2xl">{name}</p>
           <p className="text-white poppins-extralight">{job}</p>
         </div>
