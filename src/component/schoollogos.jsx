@@ -18,14 +18,14 @@ const SchoolLogos = () => {
 
     const interval = setInterval(() => {
       // Increment scrollPosition to animate logos
-      setScrollPosition((prev) => (prev >= 100 ? 0 : prev + 10.28));
+      setScrollPosition((prev) => (prev >= 100 ? 0 : prev + 5.28));
     }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="bg-lightgray p-5 z-10 overflow-hidden" data-aos="fade-left" data-aos-duration="2000">
+    <div className="bg-lightgray p-5 z-10 overflow-hidden"data-aos="fade-up" data-aos-duration="2000" >
       <div className="flex items-center overflow-hidden">
         <motion.div
           className="flex gap-4 justify-center" // Center logos horizontally

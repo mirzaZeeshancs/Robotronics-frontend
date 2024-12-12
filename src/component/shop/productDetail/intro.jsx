@@ -10,7 +10,7 @@ const Intro = () => {
       {/* parent */}
       <div className="lg:p-5 lg:px-14 flex flex-row ">
         {/* left */}
-        <div className="lg:flex flex-row justify-center hidden ">
+        <div className="lg:flex flex-row justify-center hidden "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
           {/* img */}
           <div className="p-14 h-94 w-94 rounded-full bg-gray">
             <img src={robo} className="" alt="" />
@@ -36,7 +36,7 @@ const Intro = () => {
           </div>
         </div>
         {/* right */}
-        <div className="p-5 lg:px-24 lg:space-y-14 space-y-8">
+        <div className="p-5 lg:px-24 lg:space-y-14 space-y-8"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
           {/* title */}
           <div>
             <p className=" poppins-bold lg:text-4xl ">
