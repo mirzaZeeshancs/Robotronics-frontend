@@ -1,148 +1,152 @@
-import robo from "../../../assets/logo/Robotrinic.svg";
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { FaStar } from "react-icons/fa";
-import JS from "../../../assets/images/JS-MyCouses.svg";
-const Shop = () => {
-  const courses = [
-    {
-      id: 1,
-      title: "Learning JavaScript With Imagination",
-      author: "David Millar",
-      rating: 4.8,
-      reviews: 4.8,
-      category: "Development",
-      image: JS, // Replace with your image path
-      buttonText: "Buy Now",
-      status: "Purchased",
-    },
-    {
-      id: 2,
-      title: "The Complete Graphic Design for Beginners",
-      author: "Jenny Wilson",
-      rating: 4.5,
-      reviews: 4.5,
-      category: "Design",
-      image: JS, // Replace with your image path
-      buttonText: "Buy Now",
-      status: "Purchased",
-    },
-    {
-      id: 3,
-      title: "Learning Digital Marketing on Facebook",
-      author: "Wade Warren",
-      rating: 4.3,
-      reviews: 4.3,
-      category: "Marketing",
-      image: JS, // Replace with your image path
-      buttonText: "Buy Now",
-      status: "Purchased",
-    },
-    {
-      id: 4,
-      title: "Financial Analyst Training & Investing Course",
-      author: "Robert Fox",
-      rating: 4.8,
-      reviews: 4.8,
-      category: "Business",
-      image: JS, // Replace with your image path
-      buttonText: "Buy Now",
-      status: "Purchased",
-    },
-    {
-      id: 5,
-      title: "Data Analysis & Visualization Masterclass",
-      author: "Guy Hawkins",
-      rating: 4.5,
-      reviews: 4.5,
-      category: "Data Science",
-      image: JS, // Replace with your image path
-      buttonText: "Buy Now",
-      status: "Purchased",
-    },
-    {
-      id: 6,
-      title: "Master the Fundamentals of Math",
-      author: "Sawpawlo Mark",
-      rating: 4.7,
-      reviews: 4.7,
-      category: "Mathematics",
-      image: JS, // Replace with your image path
-      buttonText: "Buy Now",
-      status: "Purchased",
-    },
-  ];
-  return (
-    <div>
-      {/* intro */}
-      <div className="p-5 flex flex-wrap w-full">
-        <div className="flex justify-between lg:px-8">
-          <div className="flex lg:w-1/2 "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
-            <img src={robo} />
-            <div className=" content-center text-wrap text-brown text-2xl md:text-5xl poppins-bold">
-              Upcoming{" "}
-              <span className=" content-center text-gold text-2xl md:text-5xl poppins-bold">
-                Courses-
-              </span>{" "}
-              Gear up for some Fun
-            </div>
-          </div>
-          {/* Two circular buttons on the right  */}
-          <div className="flex self-center gap-x-2"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
-            <button className="flex lg:w-20 w-10 h-10 lg:h-20 justify-center items-center rounded-full border border-black ">
-              <FaArrowLeft className="text-yellow" />
-            </button>
-            <button className="flex lg:w-20 lg:h-20 w-10 h-10 justify-center items-center rounded-full border border-black ">
-              <FaArrowRight className="text-yellow" />
-            </button>
-          </div>
-        </div>
-      </div>
-      {/* Shop Items */}
-      <div className="md:px-32 px-20 pb-10 flex flex-row flex-wrap gap-6">
-        {courses.map((course) => (
-          <div
-            key={course.id}
-            className="max-w-sm rounded overflow-hidden p-2 shadow-lg bg-white "data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"
-          >
-            <img className="w-full" src={course.image} alt="Course" />
-            <div className="lg:px-6 py-4">
-              <div className="lg:flex flex-row justify-between">
-                <p className="text-gray-700 poppins-bold rounded-lg px-1 bg-lin text-base">
-                  {course.category}
-                </p>
-                {/* Stars */}
-                <div className="flex items-center">
-                  <FaStar className="text-yellow-500" />
-                  <p className="text-gray-700 text-base ml-2">
-                    {course.rating} ({course.reviews} Reviews)
-                  </p>
-                </div>
-              </div>
-              <div className="poppins-bold text-xl text-wrap mb-2">
-                {course.title}
-              </div>
+import { useState, useRef, useEffect } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import img1 from "../../../assets/images/picture4.svg";
+import img2 from "../../../assets/images/picture5.svg";
+import img3 from "../../../assets/images/picture6.svg";
+import img4 from "../../../assets/images/picture7.svg";
 
-              <p className="flex flex-row text-gray-700 text-base">
-                <p className="text-line poppins-light space-x-2">by</p>
-                {course.author}
+// Array of event objects containing their respective data
+const events = [
+  {
+    id: 1,
+    title: "Grow Our Business",
+    imageUrl: img1,
+  },
+  {
+    id: 2,
+    title: "Make Uber Clone App",
+    imageUrl: img2,
+  },
+  {
+    id: 3,
+    title: "Design for Beginners",
+    imageUrl: img3,
+  },
+  {
+    id: 4,
+    title: "Advanced Design Techniques",
+    imageUrl: img4,
+  },
+];
+
+const Event = () => {
+  const [currentIndex, setCurrentIndex] = useState(1); // Start from the first cloned slide
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const sliderRef = useRef(null);
+
+  // Clone the first and last slides for infinite scrolling
+  const clonedEvents = [events[events.length - 1], ...events, events[0]];
+
+  // Handle previous slide navigation
+  const prevSlide = () => {
+    if (isTransitioning) return; // Prevent multiple clicks during transition
+    setIsTransitioning(true);
+    setCurrentIndex((prevIndex) => prevIndex - 1);
+  };
+
+  // Handle next slide navigation
+  const nextSlide = () => {
+    if (isTransitioning) return; // Prevent multiple clicks during transition
+    setIsTransitioning(true);
+    setCurrentIndex((prevIndex) => prevIndex + 1);
+  };
+
+  // Handle smooth transition and loop-back for infinite effect
+  useEffect(() => {
+    if (isTransitioning) {
+      const timeoutId = setTimeout(() => {
+        setIsTransitioning(false);
+
+        // Reset to real slides when reaching the cloned ones
+        if (currentIndex === 0) {
+          setCurrentIndex(events.length);
+        } else if (currentIndex === clonedEvents.length - 1) {
+          setCurrentIndex(1);
+        }
+      }, 500); // Duration matches the CSS transition duration
+      return () => clearTimeout(timeoutId);
+    }
+  }, [currentIndex, isTransitioning]);
+
+  // Handle smooth infinite scrolling style
+  const slideStyle = {
+    transform: `translateX(-${currentIndex * 100}%)`,
+    transition: isTransitioning ? "transform 0.5s ease" : "none",
+  };
+
+  return (
+    <div className="flex flex-col bg-background p-5 items-center">
+      {/* Header Section */}
+      <h2
+        className="text-center text-brown poppins-bold mb-6 lg:text-6xl text-2xl"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
+        Upcoming Events
+      </h2>
+
+      <div className="relative w-full overflow-hidden">
+        {/* Horizontal Slider Section */}
+        <div
+          ref={sliderRef}
+          className="flex transition-transform duration-500"
+          style={slideStyle}
+        >
+          {clonedEvents.map((event, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-full max-w-sm px-4 flex flex-col items-center"
+            >
+              {/* Event Image */}
+              <img
+                src={event.imageUrl}
+                alt={event.title}
+                className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+              />
+              {/* Event Title */}
+              <p className="text-center mt-4 text-lg text-brown font-semibold">
+                {event.title}
               </p>
             </div>
-            <div className="px-6 pt-4 pb-2">
-              <button className="bg-yellow-500 bg-yellow text-white poppins-bold py-2 px-4 rounded-full">
-                <div className="flex">
-                  <p className="poppins-bold px-4">{course.buttonText}</p>
-                  <FaArrowRight className="text-center" />
-                </div>
-              </button>
-              <span className="text-gray-700 text-base ml-4 poppins-bold">
-                {course.status}
-              </span>
-            </div>
-          </div>
+          ))}
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="absolute inset-y-0 left-0 flex items-center">
+          <button
+            onClick={prevSlide}
+            className="p-3 bg-brown text-white rounded-full hover:bg-opacity-80"
+            aria-label="Previous Slide"
+          >
+            <FaArrowLeft size={20} />
+          </button>
+        </div>
+        <div className="absolute inset-y-0 right-0 flex items-center">
+          <button
+            onClick={nextSlide}
+            className="p-3 bg-brown text-white rounded-full hover:bg-opacity-80"
+            aria-label="Next Slide"
+          >
+            <FaArrowRight size={20} />
+          </button>
+        </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="flex space-x-2 mt-4">
+        {events.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index + 1)} // Offset by 1 to skip the cloned slide
+            className={`h-3 w-3 rounded-full transition-all duration-300 ${
+              currentIndex === index + 1 ? "bg-brown scale-125" : "bg-gray-300"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          ></button>
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Shop
+export default Event;
