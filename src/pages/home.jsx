@@ -1,5 +1,5 @@
 import Footer from "../component/footer";
-// import Graph from "../component/graph";
+import Graph from "../component/graph";
 import Intro from "../component/intro";
 import Offers from "../component/offers";
 import SchoolLogos from "../component/schoollogos";
@@ -13,7 +13,7 @@ const Home = () => {
     <div className="flex flex-col">
       <Intro />
       <SchoolLogos />
-      {/* <Graph /> */}
+      <Graph />
       <Services />
       <Offers />
       <Shop />
