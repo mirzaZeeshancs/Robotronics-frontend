@@ -89,7 +89,7 @@ import { FiDownload } from "react-icons/fi";
 const CourseDescription = () => {
   return (
     <div className="bg-background lg:px-24 py-5">
-      <div className="bg-white p-8 py-10 shadow-xl rounded-md">
+      <div className="bg-white p-8 py-10 shadow-xl rounded-md"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
         {/* Course Description */}
         <div className="py-5">
           <h1 className="font-bold text-xl">Course Description</h1>

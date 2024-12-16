@@ -11,7 +11,7 @@ const Intro = () => {
     <div className="bg-background">
       <div className="p-5">
         <Header />
-        <div className="pt-10 px-10" >
+        <div className="pt-10 px-10"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000" >
           <a href="/Dashboard/MyCoursesPage">
           <button className="hover:text-brown text-xl border border-xl border-brown hover:shadow-md p-1 rounded-xl" 
          >
@@ -24,7 +24,7 @@ const Intro = () => {
         <div className="max-w-7xl mx-auto">
           <div className="lg:flex flex-wrap lg:flex-nowrap lg:space-x-6">
             {/* Left Side */}
-            <div className="w-full lg:w-2/3 space-y-6">
+            <div className="w-full lg:w-2/3 space-y-6"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
               <div>
                 <img
                   src={bg}
@@ -86,7 +86,7 @@ const Intro = () => {
             </div>
 
             {/* Right Side */}
-            <div className="w-full lg:w-1/3 mt-6 lg:mt-0 space-y-4">
+            <div className="w-full lg:w-1/3 mt-6 lg:mt-0 space-y-4"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
               <div className="bg-gray-300 w-full rounded-md flex justify-center items-center">
                 <img
                   src={yt}
