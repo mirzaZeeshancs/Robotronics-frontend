@@ -89,7 +89,7 @@ const UserInfoIntro = () => {
         <Intro />
       </div>
       {/* body */}
-      <div className="lg:flex flex-row">
+      <div className="lg:flex flex-row"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000" >
         <div className="lg:w-1/3 w-2/3">
           <LeftNav />
         </div>

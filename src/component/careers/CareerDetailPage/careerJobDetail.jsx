@@ -58,16 +58,16 @@ const CareerJobDetail = () => {
   };
   return (
     <div className="lg:px-56 px-10 bg-background">
-      <h1 className="lg:text-4xl text-xl poppins-extrabold mb-4">
+      <h1 className="lg:text-4xl text-xl poppins-extrabold mb-4"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
         {data.title}
       </h1>
-      <p className="mb-4 poppins-light">{data.description}</p>
+      <p className="mb-4 poppins-light"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >{data.description}</p>
 
-      <h2 className="text-xl poppins-bold font-bold mb-2">Role Overview:</h2>
-      <p className="mb-4">{data.roleOverview}</p>
+      <h2 className="text-xl poppins-bold font-bold mb-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >Role Overview:</h2>
+      <p className="mb-4"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >{data.roleOverview}</p>
 
-      <h2 className="text-xl poppins-bold mb-2">Key Responsibilities:</h2>
-      <ul className="list-disc poppins-light list-inside mb-4">
+      <h2 className="text-xl poppins-bold mb-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >Key Responsibilities:</h2>
+      <ul className="list-disc poppins-light list-inside mb-4"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
         {data.keyResponsibilities.map((item, index) => (
           <li key={index} className="mb-2">
             {item}
@@ -75,8 +75,8 @@ const CareerJobDetail = () => {
         ))}
       </ul>
 
-      <h2 className="text-xl poppins-bold mb-2">Required Skills:</h2>
-      <ul className="list-disc poppins-light list-inside mb-4">
+      <h2 className="text-xl poppins-bold mb-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >Required Skills:</h2>
+      <ul className="list-disc poppins-light list-inside mb-4"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
         {data.requiredSkills.map((item, index) => (
           <li key={index} className="mb-2">
             {item}
@@ -84,30 +84,30 @@ const CareerJobDetail = () => {
         ))}
       </ul>
 
-      <div className="lg:pb-20 pb-10">
+      <div className="lg:pb-20 pb-10"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
         {/* text */}
-        <div className="lg:py-20 py-10">
-          <p className="text-wrap text-brown poppins-medium lg:text-2xl text-xl mb-10">
+        <div className="lg:py-20 py-10"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
+          <p className="text-wrap text-brown poppins-medium lg:text-2xl text-xl mb-10"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
             Jumpstart your journey with Artistsweb by sending your CV, portfolio
             by using the link below.
           </p>
-          <p className="text-wrap text-brown poppins-medium lg:text-2xl text-xl">
+          <p className="text-wrap text-brown poppins-medium lg:text-2xl text-xl"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
             We appreciate passionate individuals who bring unique perspectives
             and are willing to grow with our organnization. We strongly believe
             in diversity and encourage people of all genders and ethnicities to
             apply!
           </p>
         </div>
-        <div className="space-y-5 lg:px-24">
-          <h1 className="text-4xl poppins-bold text-brown">Job Application</h1>
-          <h2 className="text-xl poppins-light text-brown">
+        <div className="space-y-5 lg:px-24"  >
+          <h1 className="text-4xl poppins-bold text-brown"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >Job Application</h1>
+          <h2 className="text-xl poppins-light text-brown"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
             Submit your details and CV
           </h2>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 bg-background p-6 max-w-4xl mx-auto"
+          className="space-y-6 bg-background p-6 max-w-4xl mx-auto"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"
         >
           {/* Name */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

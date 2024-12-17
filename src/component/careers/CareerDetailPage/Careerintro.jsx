@@ -27,7 +27,7 @@ const Careerintro = () => {
         {/* uper */}
         <div className="flex flex-row justify-between items-center ">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
             <img src={logo} alt="logo" className="w-20 h-20" />
             <h1 className=" poppins-bold text-xs">
               ROBOTRONICS
@@ -36,7 +36,7 @@ const Careerintro = () => {
             </h1>
           </a>
           {/* button */}
-            <button className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full border border-gray-300">
+            <button className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full border border-gray-300"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000"  >
             <BiMenuAltRight className="text-gray-700" size={24} />
           </button>
           
@@ -44,7 +44,7 @@ const Careerintro = () => {
         {/* lower */}
         <div className="lg:flex flex-row justify-between lg:p-10 p-5 lg:space-y-0 space-y-10 items-center ">
           {/* button */}
-          <div className="flex flex-row">
+          <div className="flex flex-row"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
             <a href="/CareerJob">
               <button className="flex items-center justify-center lg:w-12 w-8 lg:h-12 h-8 bg-gray-100 rounded-full border border-gray-300">
               <IoMdArrowBack className="text-gray-700" size={24} />
@@ -54,7 +54,7 @@ const Careerintro = () => {
             <p className="lg:p-3 poppins-regular p-1">Back</p>
           </div>
           {/* socil icons */}
-          <div className="flex flex-row justify-between lg:space-x-5 space-x-2">
+          <div className="flex flex-row justify-between lg:space-x-5 space-x-2"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000"  >
             <p className="text-center poppins-regular pt-2">Share</p>
             <a
               href="https://www.facebook.com"
@@ -114,7 +114,7 @@ const Careerintro = () => {
           <p className="" >  {data.job}</p>
         </div>
         {/* img */}
-        <div className="flex flex-col items-center bg-gray-800 p-5 rounded-xl mx-5">
+        <div className="flex flex-col items-center bg-gray-800 p-5 rounded-xl mx-5"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000" >
           {/* Position */}
           <h2 className="lg:text-5xl poppins-bold text-3xl text-brown mb-5">
             {data[0].position}

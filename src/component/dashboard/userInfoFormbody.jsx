@@ -29,10 +29,10 @@ const UserInfoFormbody = () => {
 
   return (
     <div className="lg:flex bg-background p-4">
-      <div className="">
+      <div className=""data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
         <LeftNav />
       </div>
-      <div className="w-full lg:w-4/5">
+      <div className="w-full lg:w-4/5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
         {/* form */}
         <div className="space-y-5 lg:px-24" >
         <h1 className="text-4xl poppins-bold text-brown" >My Info</h1>

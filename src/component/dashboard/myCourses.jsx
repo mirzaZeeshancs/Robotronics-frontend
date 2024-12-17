@@ -210,12 +210,12 @@ const MyCourses = () => {
   return (
     <div className="bg-background lg:flex flex-row">
       {/* Left Navigation */}
-      <div className="lg:w-1/4 w-2/3">
+      <div className="lg:w-1/4 w-2/3"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
         <LeftNav />
       </div>
 
       {/* Course Listing */}
-      <div className="w-full text-center py-5">
+      <div className="w-full text-center py-5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
         <h1 className="text-lightblack lg:text-2xl text-base poppins-bold">
           My Courses
         </h1>

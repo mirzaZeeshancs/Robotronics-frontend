@@ -21,7 +21,7 @@ const BlogDetailBody = () => {
   return (
     <div className="bg-background md:p-20 p-10 ">
       {/* top */}
-      <div className="lg:flex flex-row  ">
+      <div className="lg:flex flex-row  "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000" >
         {/* right */}
         <div className="flex flex-row space-x-6" >
           {/* right */}
@@ -93,7 +93,7 @@ const BlogDetailBody = () => {
         </div>
       </div>
       {/* other */}
-      <div className="space-y-8">
+      <div className="space-y-8"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000" >
         {/* quote */}
         <div className=" flex flex-row space-y-5 ">
           {/* Text */}

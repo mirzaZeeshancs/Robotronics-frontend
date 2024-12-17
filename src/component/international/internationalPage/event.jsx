@@ -54,7 +54,7 @@ const Event = () => {
         Upcoming Events
       </h2>
 
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
         {/* Horizontal Slider Section */}
         <div
           className="flex transition-transform duration-500"

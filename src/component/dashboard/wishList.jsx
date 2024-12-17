@@ -32,7 +32,7 @@ const WishListD = () => {
   return (
     <div className="bg-background" >
        {/* duct & NavBar */}
-      <div className="flex flex-row">
+      <div className="flex flex-row"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
         {/* NavBr */}
         <div className="w-1/3">
           <LeftNav />

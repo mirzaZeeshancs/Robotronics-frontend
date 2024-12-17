@@ -10,7 +10,7 @@ const Intro = () => {
     { name: "Wishlist", href: "/Dashboard/WishList" },
   ];
   return (
-    <div className="bg-background" >
+    <div className="bg-background"  >
       {/* intro */}
       <div>
         <div className="py-10 px-5">
