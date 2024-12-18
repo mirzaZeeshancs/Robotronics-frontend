@@ -9,7 +9,7 @@ const Intro = () => {
         <div className="w-2/4 text-center lg:p-14 lg:py-14 py-5"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000" >
             <p className="lg:text-6xl text-2xl poppins-extrabold text-gold" >CONTACT US</p>
         </div> 
-        <div className="lg:pt-14 lg:px-20 px-5 pt-5" >
+        <div className="px-44" >
             {/* image */}
             <img src={img} alt="Contact_US" className=""data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"/>
         </div>
