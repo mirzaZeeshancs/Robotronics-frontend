@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,7 +14,10 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
-
+  const [showPassword, setShowPassword] = useState(false); // State for visibility
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
   const username = firstName + lastName;
 
   const handleSignUp = async () => {
@@ -30,7 +32,7 @@ const Signup = () => {
           email: email,
           phone: phoneNumber,
           password: password,
-          isAdmin:false,
+          isAdmin: false,
         }),
       });
       console.log(response);
@@ -53,19 +55,46 @@ const Signup = () => {
       <div className="lg:flex flex-row justify-between lg:p-14 p-5">
         <div className="hidden lg:block">
           <div className="items-center p-5 space-y-5 ">
-            <p className="text-6xl text-white text-wrap poppins-bold"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+            <p
+              className="text-6xl text-white text-wrap poppins-bold"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              data-aos-delay="4000"
+            >
               Robotics
             </p>
-            <p className="text-2xl poppins-light text-white"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+            <p
+              className="text-2xl poppins-light text-white"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              data-aos-delay="4000"
+            >
               Access to courses and <br /> Products
             </p>
           </div>
           <div className="flex items-end">
-            <img className=" w-full items-end" src={robot} alt="" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"/>
+            <img
+              className=" w-full items-end"
+              src={robot}
+              alt=""
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-delay="4000"
+            />
           </div>
-          <div className="w-full border border-line"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"></div>
+          <div
+            className="w-full border border-line"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            data-aos-delay="4000"
+          ></div>
         </div>
-        <div className="flex flex-col bg-gray rounded-lg lg:p-14 p-5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+        <div
+          className="flex flex-col bg-gray rounded-lg lg:p-14 p-5"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-delay="4000"
+        >
           <div className="lg:space-y-3 space-y-1">
             <p className="lg:text-3xl text-2xl font-bold lg:pb-5 pb-2 poppins-bold ">
               Sign Up Now
