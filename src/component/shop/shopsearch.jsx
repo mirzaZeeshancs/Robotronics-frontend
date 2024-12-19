@@ -13,6 +13,9 @@ import { useEffect, useState } from "react";
 
 const Shopsearch = () => {
   const [products, setProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 9;
 
   useEffect(() => {
     fetch("http://localhost:8080/getProducts")
@@ -23,6 +26,21 @@ const Shopsearch = () => {
       })
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
+
+  // Filtered products based on search query
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Pagination logic
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   return (
     <div className="flex flex-col bg-lightgray lg:px-20 px-2">
@@ -87,8 +105,10 @@ const Shopsearch = () => {
                 <input
                   type="text"
                   className="border border-gray w-full"
-                  placeholder=""
-                ></input>
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
               </div>
               {/* search */}
               <div className="flex ">
@@ -112,18 +132,17 @@ const Shopsearch = () => {
           <Shopfilter />
           {/* shop items */}
           <div className="flex flex-wrap lg:px-10">
-            {Array.isArray(products) &&
-              products.map((product) => (
-                <a href="/ProductDetailPage" key={product.id}>
-                  <Shopproduct
-                    title={product.title}
-                    description={product.description}
-                    image={product.image}
-                    price={product.price}
-                    category={product.category}
-                  />
-                </a>
-              ))}
+            {currentProducts.map((product) => (
+              <a href="/ProductDetailPage" key={product.id}>
+                <Shopproduct
+                  title={product.title}
+                  description={product.description}
+                  image={product.image}
+                  price={product.price}
+                  category={product.category}
+                />
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -133,33 +152,21 @@ const Shopsearch = () => {
           <ShopPages />
         </div>
         <div className="lg:flex flex-row justify-between lg:p-5">
-          {/* buttons */}
-          <div className="flex "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
-            <div className="p-1">
-              <button className="p-1 px-3 bg-white lg:text-base text-sm hover:bg-gold ">
-                1
+          {/* Pagination */}
+          <div className="flex">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index}
+                className={`p-1 px-3 ${currentPage === index + 1 ? "bg-gold" : "bg-white"} lg:text-base text-sm hover:bg-gold`}
+                onClick={() => setCurrentPage(index + 1)}
+              >
+                {index + 1}
               </button>
-            </div>
-            <div className="p-1">
-              <button className="p-1 px-3 bg-white lg:text-base text-sm hover:bg-gold">
-                2
-              </button>
-            </div>
-            <div className="p-1">
-              <button className="p-1 px-3 bg-white lg:text-base text-sm hover:bg-gold">
-                3
-              </button>
-            </div>
-            <div className="p-1">
-              <button className="p-1 px-3 bg-white lg:text-base text-sm hover:bg-gold">
-                4
-              </button>
-            </div>
+            ))}
           </div>
-          {/* text */}
-          <div className="flex "data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+          <div className="flex" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
             <p className="lg:text-base poppins-medium text-sm">
-              SHOWED 1 - 9 OF 30 PRODUCTS
+              SHOWED {indexOfFirstProduct + 1} - {Math.min(indexOfLastProduct, filteredProducts.length)} OF {filteredProducts.length} PRODUCTS
             </p>
           </div>
         </div>
