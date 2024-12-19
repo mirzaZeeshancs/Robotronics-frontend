@@ -3,10 +3,14 @@ import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/logo/Robotrinic.svg";
 import Aos from "aos";
 import { useSelector } from "react-redux";
+import { FaChevronDown } from "react-icons/fa";
+
 
 export default function Header() {
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [token, setToken] = useState(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items) || 0;
@@ -16,7 +20,7 @@ export default function Header() {
   );
 
   useEffect(() => {
-    Aos.init(); // Initialize AOS library
+    Aos.init(); // Initialize AOS librarya
     const storedToken = sessionStorage.getItem("token");
     setToken(storedToken);
     // In a real application, you'd decode the token or fetch the username
@@ -26,6 +30,18 @@ export default function Header() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const services = [
+    "Robotic Workshops",
+    "Robotic Kits",
+    "After-School Robotics Clubs",
+    "Grade 1-8 Robotronics Curriculum.",
+    "Robotic Competitions (Management, Preparation and Consultation)",
+  ];
 
   const handleLogout = () => {
     sessionStorage.removeItem("token");
@@ -60,7 +76,7 @@ export default function Header() {
         >
           <div className="flex space-x-6 flex-row">
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-shadow-md hover:text-black hover:border-b hover:border-black text-black text-lg transition duration-300"
+              className="mr-2 cursor-pointer poppins-light hover:text-shadow-md hover:text-black hover:border-b hover:border-black text-black text-lg transition duration-300"
               to="/"
             >
               Home
@@ -73,37 +89,69 @@ export default function Header() {
               Contact
             </NavLink>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg "
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg "
               to="/aboutUs"
             >
               About Us
             </NavLink>
+            {/* Dropdown for Services */}
+            <div className="relative">
+              {/* <button
+                className="cursor-pointer hover:text-black poppins-light hover:border-b hover:border-black text-black text-lg"
+                onClick={toggleDropdown}
+              >
+                Services
+              </button> */}
+              <NavLink
+                type="button"
+                className="flex cursor-pointer hover:text-black poppins-light hover:border-b hover:border-black text-black text-lg"
+                onMouseEnter={toggleDropdown} // Opens the dropdown on hover
+                aria-expanded={dropdownOpen ? "true" : "false"}
+                aria-haspopup="true"
+                to="/International/Iservices"
+              >
+                Our Services
+                {/* <FaChevronDown className="mt-[6px] ml-2" />y */}
+              </NavLink>
+              {dropdownOpen && (
+                <div
+                className="origin-top-right absolute border border-lin mt-2 w-72 rounded-md shadow-lg bg-dropbox ring-1 hover:text-brown ring-black ring-opacity-5" // Increased width to w-72
+                onMouseLeave={toggleDropdown} // Closes the dropdown when hovering out
+              >
+                <div className="py-1 max-h-56 overflow-y-auto">
+                  {services.map((service, index) => (
+                    <a
+                      key={index}
+                      href="#"
+                      className="block px-4 py-2 text-sm text-wrap text-gray hover:bg-yellow poppins-regular hover:text-brown"
+                    >
+                      {service}
+                    </a>
+                  ))}
+                </div>
+              </div>
+              )}
+            </div>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
-              to="/International/Iservices"
-            >
-              Services
-            </NavLink>
-            <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/Course"
             >
               Courses
             </NavLink>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/shop"
             >
               Shop
             </NavLink>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/International/videoGallery"
             >
               Events
             </NavLink>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/Blog"
             >
               Blog
@@ -142,7 +190,7 @@ export default function Header() {
                 </span>
                 <button
                   onClick={handleLogout}
-                  className="py-1 px-4 rounded bg-signin text-white hover:bg-opacity-90 transition duration-300"
+                  className="py-1 px-2 rounded bg-signin text-white hover:bg-opacity-90 transition duration-300"
                 >
                   Logout
                 </button>
@@ -151,13 +199,13 @@ export default function Header() {
               <div className="flex border rounded-lg">
                 <NavLink
                   to="/Signup"
-                  className="py-1 px-4 rounded m-2 cursor-pointer shadow-4xl focus:outline-none transition duration-300 hover:bg-signin hover:text-white"
+                  className="py-1 px-2 rounded m-2 cursor-pointer shadow-4xl focus:outline-none transition duration-300 hover:bg-signin hover:text-white"
                 >
                   Sign Up
                 </NavLink>
                 <NavLink
                   to="/Login"
-                  className="py-1 px-4 rounded m-2 cursor-pointer shadow-4xl focus:outline-none transition duration-300 hover:bg-signin hover:text-white"
+                  className="py-1 px-2 rounded m-2 cursor-pointer shadow-4xl focus:outline-none transition duration-300 hover:bg-signin hover:text-white"
                 >
                   Login
                 </NavLink>
@@ -226,37 +274,37 @@ export default function Header() {
             </NavLink>
             {/* ... other mobile NavLink items ... */}
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg "
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg "
               to="/aboutUs"
             >
               About Us
             </NavLink>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/International/Iservices"
             >
               Services
             </NavLink>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/Course"
             >
               Courses
             </NavLink>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/shop"
             >
               Shop
             </NavLink>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/International/videoGallery"
             >
               Events
             </NavLink>
             <NavLink
-              className="mr-3 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/Blog"
             >
               Blog

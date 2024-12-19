@@ -11,7 +11,7 @@ const MyRobot = () => {
   // Fetch robot data from the API
   const fetchRobots = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/robots");
+      const response = await fetch("http://localhost:8080/getProducts");
       if (!response.ok) {
         throw new Error("Failed to fetch robots");
       }
@@ -29,7 +29,12 @@ const MyRobot = () => {
   }, []);
 
   return (
-    <div className="bg-background min-h-screen" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+    <div
+      className="bg-background min-h-screen"
+      data-aos="fade-right"
+      data-aos-duration="2000"
+      data-aos-delay="4000"
+    >
       {/* Intro */}
       <div>
         <Intro />
@@ -44,7 +49,9 @@ const MyRobot = () => {
 
         {/* Product List */}
         <div className="w-full py-10">
-          <h1 className="text-lightblack poppins-bold lg:text-2xl text-base lg:ml-14 ml-8">My Robots</h1>
+          <h1 className="text-lightblack poppins-bold lg:text-2xl text-base lg:ml-14 ml-8">
+            My Robots
+          </h1>
 
           {loading ? (
             <p className="text-center text-gray-400">Loading robots...</p>
@@ -65,18 +72,28 @@ const MyRobot = () => {
 
                   {/* Image */}
                   <div>
-                    <img src={img} className="lg:w-20 lg:h-20 w-16 h-16 object-contain" alt="Product" />
+                    <img
+                      src={img}
+                      className="lg:w-20 lg:h-20 w-16 h-16 object-contain"
+                      alt="Product"
+                    />
                   </div>
 
                   {/* Text Details */}
                   <div className="flex flex-col space-y-2">
-                    <p className="text-brown poppins-bold text-xl">{robot.name}</p>
+                    <p className="text-brown poppins-bold text-xl">
+                      {robot.name}
+                    </p>
                     <div className="flex flex-row items-center">
-                      <p className="text-brown poppins-bold text-sm mr-2">Color:</p>
+                      <p className="text-brown poppins-bold text-sm mr-2">
+                        Color:
+                      </p>
                       <p className="text-sm poppins-light">{robot.color}</p>
                     </div>
                     <div className="flex flex-row items-center">
-                      <p className="text-brown poppins-bold text-sm mr-2">Quantity:</p>
+                      <p className="text-brown poppins-bold text-sm mr-2">
+                        Quantity:
+                      </p>
                       <p className="text-sm poppins-bold">{robot.Quantity}</p>
                     </div>
                   </div>
