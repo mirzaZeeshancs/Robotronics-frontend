@@ -11,26 +11,26 @@ import "aos/dist/aos.css"; // Import CSS for AOS
 import Header from "../component/header";
 import Robort from "../assets/images/Robort.svg";
 import Aos from "aos";
-import { FaChevronDown } from "react-icons/fa";
+// import { FaChevronDown } from "react-icons/fa";
 
 const Intro = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     Aos.init(); // Initialize AOS library
   }, []);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleDropdown = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
-  const services = [
-    "Robotic Workshops",
-    "Robotic Kits",
-    "After-School Robotics Clubs",
-    "Grade 1-8 Robotronics Curriculum.",
-    "Robotic Competitions (Management, Preparation and Consultation)",
-  ];
+  // const services = [
+  //   "Robotic Workshops",
+  //   "Robotic Kits",
+  //   "After-School Robotics Clubs",
+  //   "Grade 1-8 Robotronics Curriculum.",
+  //   "Robotic Competitions (Management, Preparation and Consultation)",
+  // ];
 
   return (
     <>
@@ -41,7 +41,7 @@ const Intro = () => {
 
         <div className="space-y-5">
           {/* As a School & Parent */}
-          <div className="w-full flex justify-center">
+          {/* <div className="w-full flex justify-center">
             <div
               className="relative inline-block text-left"
               data-aos="fade-up"
@@ -77,7 +77,7 @@ const Intro = () => {
                 </div>
               )}
             </div>
-          </div>
+          </div> */}
 
           <div className="flex justify-between w-full p-10">
             {/* text */}
