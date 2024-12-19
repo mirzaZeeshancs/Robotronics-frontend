@@ -16,17 +16,23 @@ const ShopCartProductList = ({ onNext }) => {
       return { count: cartItems[id].count, ...data };
     } catch (error) {
       console.error(`Error fetching item with ID ${id}:`, error);
-      return null; // Handle error as needed
+      return null;
     }
   };
 
   useEffect(() => {
     const fetchAllCartItems = async () => {
-      const ids = Object.keys(cartItems); // Extract the IDs from cartItems
-      const itemPromises = ids.map((id) => fetchItem(id)); // Map IDs to fetch promises
-      const itemsData = await Promise.all(itemPromises); // Wait for all API calls
-      const validItemsData = itemsData.filter((item) => item !== null); // Filter out any null results
-      setItems(validItemsData); // Update state with fetched items
+      const ids = Object.keys(cartItems);
+      const itemPromises = ids.map((id) => fetchItem(id));
+      const itemsData = await Promise.all(itemPromises);
+      const validItemsData = itemsData.filter((item) => item !== null);
+      setItems(validItemsData);
+
+      const total = validItemsData.reduce(
+        (sum, item) => sum + item.count * item.price,
+        0
+      );
+      setTotalPrice(total);
     };
 
     fetchAllCartItems();
@@ -120,7 +126,47 @@ const ShopCartProductList = ({ onNext }) => {
             >
               PROCEED TO CHECKOUT
             </button>
+
           </div>
+        </div>
+
+        <div className="mt-6">
+          <label
+            htmlFor="voucher"
+            className="block text-sm font-medium text-gray-300 mb-2"
+          >
+            Voucher Code
+          </label>
+          <input
+            type="text"
+            id="voucher"
+            placeholder="Enter voucher code"
+            className="w-full bg-gray-700 border border-gray-600 text-gray-200 rounded-md px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+          />
+        </div>
+
+        <div className="mt-4">
+          <label
+            htmlFor="notes"
+            className="block text-sm font-medium text-gray-300 mb-2"
+          >
+            Notes
+          </label>
+          <textarea
+            id="notes"
+            placeholder="Add any notes..."
+            className="w-full bg-gray-700 border border-gray-600 text-gray-200 rounded-md px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div className="mt-6 text-center">
+          <button
+            className="w-full bg-yellow-500 text-gray-900 font-bold py-3 rounded-md hover:bg-yellow-600 transition"
+            onClick={onNext}
+          >
+            Proceed to Checkout
+          </button>
         </div>
       </div>
     </div>
@@ -128,6 +174,3 @@ const ShopCartProductList = ({ onNext }) => {
 };
 
 export default ShopCartProductList;
-
-
-
