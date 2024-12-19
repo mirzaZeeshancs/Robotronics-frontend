@@ -47,12 +47,13 @@ const CustomerOrder = ({ onNext }) => {
 
   return (
     <div
-      className="lg:px-14 px-5 lg:p-8 p-4 lg:space-y-20 space-y-8 bg-gray-900 text-gray-200"
+      className="lg:px-14 px-5 lg:p-8 p-4 lg:space-y-20 space-y-8 "
       data-aos="fade-left"
       data-aos-duration="2000"
-      data-aos-delay="400"
+      data-aos-delay="4000"
     >
-      {/* Header */}
+      {/* text */}
+
       <div className="lg:space-y-8 space-y-4">
         <p className="lg:text-4xl text-2xl font-bold">YOUR ORDER</p>
         <p className="text-sm text-gray-400">Review all the products you want to buy</p>
