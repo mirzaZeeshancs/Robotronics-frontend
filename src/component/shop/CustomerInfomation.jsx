@@ -4,23 +4,13 @@ const CustomerInfomation = ({ onNext }) => {
     <div className="lg:flex flex-row p-5 bg-gray">
       {/* left */}
       <div className="lg:w-2/3 p-8">
-        <div
-          className="p-8 space-y-5"
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          data-aos-delay="4000"
-        >
+        <div className="p-8 space-y-5"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
           <p className="lg:text-4xl text-2xl poppins-bold ">YOUR INFOMATION</p>
           <p className="text-sm text-line poppins-regular">
             Add your name, phone number and address.
           </p>
         </div>
-        <div
-          className="lg:p-8 p-4 "
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          data-aos-delay="4000"
-        >
+        <div className="lg:p-8 p-4 "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 gap-4">
             {/* Left side */}
             <form className="">
@@ -178,12 +168,7 @@ const CustomerInfomation = ({ onNext }) => {
         </div>
       </div>
       {/* line */}
-      <div
-        className="px-1"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-        data-aos-delay="4000"
-      >
+      <div className="px-1"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
         <div className="h-full w-0 border border-brown"></div>
       </div>
       {/* right */}
