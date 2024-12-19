@@ -1,130 +1,130 @@
 import robo from "../../../assets/images/shopRobot.svg";
 import star from "../../../assets/images/shopStar.svg";
 import Header from "../../header";
-
 const Intro = () => {
   return (
-    <div className="bg-lightgray min-h-screen">
-      {/* Header Section */}
-      <div className="p-5">
+    <div className="bg-lightgray">
+      <div className="P-5 ">
         <Header />
       </div>
-
-      {/* Main Content */}
-      <div className="flex flex-col lg:flex-row lg:px-14 px-5 py-10 items-center lg:items-start space-y-8 lg:space-y-0">
-        {/* Left Section - Product Image */}
-        <div
-          className="hidden lg:flex flex-col items-center space-y-5"
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          data-aos-delay="400"
-        >
-          {/* Main Image */}
-          <div className="p-10 h-94 w-94 rounded-full bg-gray flex items-center justify-center shadow-lg">
-            <img src={robo} alt="Robot" className="object-contain h-full" />
+      {/* parent */}
+      <div className="lg:p-5 lg:px-14 flex flex-row ">
+        {/* left */}
+        <div className="lg:flex flex-row justify-center hidden "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+          {/* img */}
+          <div className="p-14 h-94 w-94 rounded-full bg-gray">
+            <img src={robo} className="" alt="" />
           </div>
-          {/* Thumbnails */}
-          <div className="flex space-x-3">
-            {[...Array(4)].map((_, index) => (
-              <div
-                key={index}
-                className="h-12 w-12 bg-white shadow-lg rounded-lg overflow-hidden"
-              >
-                <img src={robo} alt="Thumbnail" className="h-full w-full" />
-              </div>
-            ))}
+          {/* pic's */}
+          <div className="flex flex-row space-x-3 py-10">
+            {/* pic 1 */}
+            <div className="h-10 w-10 bg-white shadow-lg">
+              <img src={robo} className="h-10 w-10" alt="" />
+            </div>
+            {/* pic 2 */}
+            <div className="h-10 w-10 bg-white shadow-lg">
+              <img src={robo} className="h-10 w-10" alt="" />
+            </div>
+            {/* pic 3 */}
+            <div className="h-10 w-10 bg-white shadow-lg">
+              <img src={robo} className="h-10 w-10" alt="" />
+            </div>
+            {/* pic 4 */}
+            <div className="h-10 w-10 bg-white shadow-lg">
+              <img src={robo} className="h-10 w-10" alt="" />
+            </div>
           </div>
         </div>
-
-        {/* Right Section - Product Details */}
-        <div
-          className="lg:px-10 flex flex-col space-y-8 lg:space-y-14"
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          data-aos-delay="400"
-        >
-          {/* Title */}
-          <h1 className="poppins-bold text-3xl lg:text-4xl text-brown">
-            Arduino Based Robots
-          </h1>
-
-          {/* Sale Information */}
-          <div className="space-y-5">
-            {/* Stars and Sale Tag */}
-            <div className="flex items-center space-x-6">
-              <img src={star} alt="Rating" className="h-6 w-auto" />
-              <span className="bg-red-600 text-white text-sm px-4 py-1 rounded-lg">
-                ON SALE
-              </span>
+        {/* right */}
+        <div className="p-5 lg:px-24 lg:space-y-14 space-y-8"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+          {/* title */}
+          <div>
+            <p className=" poppins-bold lg:text-4xl ">
+              Arduino Based Robots
+            </p>
+          </div>
+          {/* sale */}
+          <div className="space-y-8">
+            {/* stars */}
+            <div className="flex flex-row lg:space-x-14 space-x-8">
+              {/* img */}
+              <div>
+                <img src={star} alt="" />
+              </div>
+              {/* button */}
+              <div className="bg-red-600 p-1 px-2">
+                <button className="text-white">ON SALE</button>
+              </div>
             </div>
-            {/* Sales Stats */}
-            <div className="text-gray-600 text-sm flex space-x-4">
-              <span>261 products sold</span>
-              <span>3.1k products watched</span>
+            {/* text */}
+            <div className="flex flex-row space-x-2 ">
+              <p className="text-sm poppins-medium text-line ">261 products sold .</p>
+              <p className="text-sm poppins-medium text-line ">3,1k products watched</p>
             </div>
           </div>
-
-          {/* Selection Options */}
-          <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
-            {/* Type Selector */}
-            <div className="flex flex-col items-center bg-white p-4 rounded-lg shadow-md">
+          <div className="flex flex-row lg:justify-between space-x-2">
+            {/* button */}
+            <div className="lg:px-5 bg-white text-center justify-center">
               <label
-                htmlFor="robot-type"
-                className="text-sm font-medium text-gray-700 mb-2"
+                htmlFor="robot border-non bg-white "
+                aria-placeholder="TYPE"
               >
-                TYPE
+                TYPE:
               </label>
-              <select
-                id="robot-type"
-                className="text-sm px-3 py-2 rounded-lg bg-gray-100 border border-gray-300 focus:ring focus:ring-brown focus:outline-none"
-              >
-                <option value="robot">Robot</option>
-                <option value="robot1">Robot 1</option>
-                <option value="robot2">Robot 2</option>
+              <select id="cars border lg:text-base text-center text-sm border-white bg-brown">
+                <option value="volvo">ROBOT</option>
+                <option value="saab">ROBOT</option>
+                <option value="vw">ROBOT</option>
               </select>
             </div>
-
-            {/* Quantity Selector */}
-            <div className="flex items-center bg-white p-4 rounded-lg shadow-md">
-              {/* Decrease Button */}
-              <button className="px-3 py-1 bg-gray-200 text-gray-700 rounded-l-lg hover:bg-gray-300 focus:outline-none">
+            {/* button */}
+            <div className=" bg-white">
+              {/* Decrease button */}
+              <button
+                className="lg:px-3 px-1 lg:py-1 bg-gray-200 rounded-md text-gray-700 hover:bg-gray-300 focus:outline-none"
+                // onClick={handleDecrease}
+              >
                 -
               </button>
-              {/* Quantity Input */}
+              {/* Quantity input */}
               <input
                 type="number"
-                className="w-16 text-center border border-gray-300 px-2 py-1 focus:outline-none"
-                placeholder="1"
+                className="lg:w-24 w-10 lg:px-3 px-1 py-1 text-sm rounded-md focus:outline-none"
+                // value={initialValue}
+                placeholder="NUMBER:"
                 min="1"
+                readOnly
               />
-              {/* Increase Button */}
-              <button className="px-3 py-1 bg-gray-200 text-gray-700 rounded-r-lg hover:bg-gray-300 focus:outline-none">
+              {/* Increase button */}
+              <button
+                className="px-3 py-1 bg-gray-200 rounded-md text-gray-700 hover:bg-gray-300 focus:outline-none"
+                // onClick={handleIncrease}
+              >
                 +
               </button>
             </div>
           </div>
+          {/* buy now */}
+          <div className="lg:flex flex-row justify-between lg:space-x-10 " >
 
-          {/* Pricing and Actions */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between lg:space-x-10 space-y-4 lg:space-y-0">
-            {/* Price */}
-            <div className="text-yellow-600 text-3xl font-semibold">
-              Pkr 2352.41
-            </div>
-            {/* Action Buttons */}
-            <div className="flex items-center space-x-4">
+            <div className="text-yellow text-2xl poppins-medium" >Pkr 2352.41</div>
+            <div className="flex flex-row space-x-5">
+              {/* buy now button */}
+            <div>
               <a href="/cart">
-                <button className="bg-brown text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition">
-                  BUY NOW
-                </button>
+              <button className="bg-brown p-2 lg:px-6 text-white poppins-medium rounded-lg" >BUY NOW</button>
               </a>
-              <button className="bg-yellow-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-600 transition">
-                ADD TO CART
-              </button>
             </div>
-            {/* Wishlist */}
-            <button className="bg-gray-200 px-3 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-300 transition">
-              <span>8</span>
-            </button>
+            {/* Add to card button */}
+            <div>
+              <button className="bg-yellow p-2 lg:px-7 text-white poppins-medium rounded-lg" >ADD TO CARD</button>
+            </div>
+            </div>
+            {/* WISH LIST */}
+            <div>
+              <button className="bg-gray p-2 px-3 poppins-medium rounded-lg">8</button>
+            </div>
+
           </div>
         </div>
       </div>
