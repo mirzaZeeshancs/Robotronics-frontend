@@ -12,6 +12,8 @@ import ProductDetailPage from "./pages/shop/ProductDetailPage";
 import CoursesProductDetail from "./pages/courses/coursesProductDetail";
 import ShippingService from "./pages/shop/shippingService";
 import CareerJob from "./pages/career/careerJob";
+
+import SendResumeForm from "./component/SendResumeForm";
 import CareerDetailPage from "./pages/career/careerDetailPage";
 import Blog from "./pages/Blog/blog";
 import BlogDetail from "./pages/Blog/blogDetail";
@@ -53,6 +55,8 @@ function App() {
             element={<CoursesProductDetail />}
           />
           <Route path="/CareerJob" element={<CareerJob />} />
+          {/* <Route path="/" element={<CareesFindRole />} /> */}
+          <Route path="/send-resume" element={<SendResumeForm />} />
           <Route path="/CareerDetailPage" element={<CareerDetailPage />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/BlogDetail" element={<BlogDetail />} />

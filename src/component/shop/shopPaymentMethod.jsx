@@ -160,7 +160,7 @@ const ShopPaymentMethod = () => {
               </span>
               <p className="text-wrap poppins-light text-sm space-y-2">
                 {" "}
-                You can use all Cradit card services.We can accept Visa and
+                You can use all Credit card services.We can accept Visa and
                 Master Card.
               </p>
               </div>

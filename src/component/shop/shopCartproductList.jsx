@@ -32,6 +32,16 @@ const ShopCartproductList = ({ onNext }) => {
   }, []);
   console.log("items", items);
 
+  // Calculate total price
+  const totalPrice = items.reduce(
+    (total, item) => total + item.count * item.price,
+    0
+  );
+
+  // Calculate discounted price
+  const discountAmount = (totalPrice * discountPercentage) / 100;
+  const discountedPrice = totalPrice - discountAmount;
+
   return (
     // body of the page
     <div className="lg:flex flex-row">
@@ -116,5 +126,6 @@ const ShopCartproductList = ({ onNext }) => {
     </div>
   );
 };
+
 
 export default ShopCartproductList;
