@@ -1,8 +1,22 @@
 import { AiOutlineDown } from "react-icons/ai"; // Import the icon for dropdowns
 import WorkshopCard from "./WorkshopCard"; // Import the WorkshopCard component
 import Pagination from "../../blog/Pagination";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+
 const workshopsData = [
+  {
+    id: 1,
+    instructor: "Bilal Ahmed",
+    instructorpic: "../../../assets/images/workshopCards.svg",
+    title: "Robotic Workshop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    time: "7 min",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
+    image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
+  },
   {
     id: 2,
     instructor: "Bilal Ahmed",
@@ -11,8 +25,10 @@ const workshopsData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
     time: "7 min",
-    date: "9:00 am To 11:00 am",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
     image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
   },
   {
     id: 3,
@@ -22,8 +38,10 @@ const workshopsData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
     time: "7 min",
-    date: "9:00 am To 11:00 am",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
     image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
   },
   {
     id: 4,
@@ -33,8 +51,10 @@ const workshopsData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
     time: "7 min",
-    date: "9:00 am To 11:00 am",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
     image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
   },
   {
     id: 5,
@@ -44,8 +64,10 @@ const workshopsData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
     time: "7 min",
-    date: "9:00 am To 11:00 am",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
     image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
   },
   {
     id: 6,
@@ -55,8 +77,10 @@ const workshopsData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
     time: "7 min",
-    date: "9:00 am To 11:00 am",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
     image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
   },
   {
     id: 7,
@@ -66,8 +90,10 @@ const workshopsData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
     time: "7 min",
-    date: "9:00 am To 11:00 am",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
     image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
   },
   {
     id: 8,
@@ -77,8 +103,10 @@ const workshopsData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
     time: "7 min",
-    date: "9:00 am To 11:00 am",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
     image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
   },
   {
     id: 9,
@@ -88,35 +116,224 @@ const workshopsData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
     time: "7 min",
-    date: "9:00 am To 11:00 am",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
     image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
+  },
+  {
+    id: 10,
+    instructor: "Bilal Ahmed",
+    instructorpic: "../../../assets/images/workshopCards.svg",
+    title: "Robotic Workshop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    time: "7 min",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
+    image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
+  },
+  {
+    id: 11,
+    instructor: "Bilal Ahmed",
+    instructorpic: "../../../assets/images/workshopCards.svg",
+    title: "Robotic Workshop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    time: "7 min",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
+    image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
+  },
+  {
+    id: 12,
+    instructor: "Bilal Ahmed",
+    instructorpic: "../../../assets/images/workshopCards.svg",
+    title: "Robotic Workshop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    time: "7 min",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
+    image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
+  },
+  {
+    id: 13,
+    instructor: "Bilal Ahmed",
+    instructorpic: "../../../assets/images/workshopCards.svg",
+    title: "Robotic Workshop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    time: "7 min",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
+    image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
+  },
+  {
+    id: 14,
+    instructor: "Bilal Ahmed",
+    instructorpic: "../../../assets/images/workshopCards.svg",
+    title: "Robotic Workshop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    time: "7 min",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
+    image: "../../../assets/images/workshopCards.svg",
+    city: "Lahore",
+    popularity: 5,
+  },
+  {
+    id: 15,
+    instructor: "Bilal Ahmed",
+    instructorpic: "../../../assets/images/workshopCards.svg",
+    title: "Robotic Workshop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    time: "7 min",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
+    image: "../../../assets/images/workshopCards.svg",
+    city: "Karachi",
+    popularity: 5,
+  },
+  {
+    id: 16,
+    instructor: "Bilal Ahmed",
+    instructorpic: "../../../assets/images/workshopCards.svg",
+    title: "Robotic Workshop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    time: "7 min",
+    date: "2023-01-20T09:00:00", // Use ISO format for dates
+    image: "../../../assets/images/workshopCards.svg",
+    city: "Islamabad",
+    popularity: 5,
   },
 ];
 
-const Intro = () => {
-  const [currentPage, setCurrentPage] = useState(3);
-  const totalPages = 3;
+const Filters = ({ selectedDate, setSelectedDate, selectedSchool, setSelectedSchool, selectedCity, setSelectedCity, sortBy, setSortBy }) => (
+  <div className="flex flex-wrap md:flex-nowrap space-y-4 md:space-y-0 md:space-x-6 mb-6">
+    <div className="w-full md:w-1/4">
+      <label className="block text-brown poppins-medium mb-2">Date</label>
+      <input
+        type="date"
+        className="w-full p-2 border border-gray rounded"
+        value={selectedDate}
+        onChange={(e) => setSelectedDate(e.target.value)}
+      />
+    </div>
+    <div className="w-full md:w-1/4">
+      <label className="block text-brown poppins-medium mb-2">School Name</label>
+      <input
+        type="text"
+        className="w-full p-2 border border-gray rounded"
+        value={selectedSchool}
+        onChange={(e) => setSelectedSchool(e.target.value)}
+      />
+    </div>
+    <div className="w-full md:w-1/4">
+      <label className="block text-brown poppins-medium mb-2">Select City</label>
+      <select
+        className="w-full p-2 border border-gray rounded"
+        value={selectedCity}
+        onChange={(e) => setSelectedCity(e.target.value)}
+      >
+        <option value="">City</option>
+        <option value="Lahore">Lahore</option>
+        <option value="Karachi">Karachi</option>
+        <option value="Islamabad">Islamabad</option>
+      </select>
+    </div>
+    <div className="w-full md:w-1/4">
+      <label className="block text-brown poppins-medium mb-2">Sort by</label>
+      <select
+        className="w-full p-2 border border-gray rounded"
+        value={sortBy}
+        onChange={(e) => setSortBy(e.target.value)}
+      >
+        <option value="Videos">Videos</option>
+        <option value="Date">Date</option>
+        <option value="Popularity">Popularity</option>
+      </select>
+    </div>
+  </div>
+);
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
+const Intro = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const workshopsPerPage = 12;
+
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedSchool, setSelectedSchool] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [sortBy, setSortBy] = useState("Videos");
 
+  const filteredWorkshops = useMemo(() => {
+    return workshopsData
+      .filter((workshop) => {
+        if (selectedDate && !workshop.date.includes(selectedDate)) return false;
+        if (
+          selectedSchool &&
+          !workshop.instructor.toLowerCase().includes(selectedSchool.toLowerCase())
+        )
+          return false;
+        if (selectedCity && workshop.city !== selectedCity) return false;
+        return true;
+      })
+      .sort((a, b) => {
+        if (sortBy === "Date") {
+          return new Date(a.date) - new Date(b.date);
+        } else if (sortBy === "Popularity") {
+          return b.popularity - a.popularity;
+        }
+        return 0;
+      });
+  }, [selectedDate, selectedSchool, selectedCity, sortBy]);
+
+  const indexOfLastWorkshop = currentPage * workshopsPerPage;
+  const currentWorkshops = filteredWorkshops.slice(
+    indexOfLastWorkshop - workshopsPerPage,
+    indexOfLastWorkshop
+  );
+
   return (
     <div className="bg-gray p-14">
       <div className="flex flex-wrap md:flex-nowrap md:space-x-6">
-        {/* Sidebar */}
+        <aside className="p-5 md:w-1/6">
+           {/* Sidebar */}
         <div className="p-5 md:w-1/6 mb-6 md:mb-0">
-          <h2 className="font-bold text-3xl poppins-bold text-brown mb-4"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">Workshops</h2>
-          <h2 className="border border-brown w-1/3 h-2 rounded-md bg-brown mb-4"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000"></h2>
+          <h2
+            className="font-bold text-3xl poppins-bold text-brown mb-4"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            data-aos-delay="4000"
+          >
+            Workshops
+          </h2>
+          <h2
+            className="border border-brown w-1/3 h-2 rounded-md bg-brown mb-4"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            data-aos-delay="4000"
+          ></h2>
           <div>
-            <h3 className="poppins-medium text-brown text-lg mb-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+            <h3
+              className="poppins-medium text-brown text-lg mb-2"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              data-aos-delay="4000"
+            >
               Robotics Workshop
             </h3>
-            <ul className="space-y-1"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+            <ul
+              className="space-y-1"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              data-aos-delay="4000"
+            >
               <li className="text-gray-600 poppins-light hover:text-brown text-lin cursor-pointer">
                 Batch 01
               </li>
@@ -129,10 +346,20 @@ const Intro = () => {
             </ul>
           </div>
           <div className="mt-4">
-            <h3 className="poppins-medium text-brown text-lg mb-2"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+            <h3
+              className="poppins-medium text-brown text-lg mb-2"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              data-aos-delay="4000"
+            >
               EV3 Workshop
             </h3>
-            <ul className="space-y-1"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+            <ul
+              className="space-y-1"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              data-aos-delay="4000"
+            >
               <li className="text-gray-600 poppins-light hover:text-brown text-lin cursor-pointer">
                 Batch 01
               </li>
@@ -145,80 +372,29 @@ const Intro = () => {
             </ul>
           </div>
         </div>
-
-        {/* Main content */}
-        <div className="w-full md:w-3/4">
-          <div className="flex flex-wrap md:flex-nowrap space-y-4 md:space-y-0 md:space-x-6 mb-6">
-            <div className="w-full md:w-1/4">
-              <label className="block text-brown poppins-medium mb-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
-                Date
-              </label>
-              <input
-                type="date"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"
-                className="w-full p-2 border border-gray rounded"
-                value={selectedDate}
-                onChange={(e) => setSelectedDate(e.target.value)}
-              />
-            </div>
-            <div className="w-full md:w-1/4">
-              <label className="block text-brown poppins-medium  mb-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
-                School Name
-              </label>
-              <input
-                type="text"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"
-                className="w-full p-2 border border-gray rounded"
-                value={selectedSchool}
-                onChange={(e) => setSelectedSchool(e.target.value)}
-              />
-            </div>
-            <div className="w-full md:w-1/4">
-              <label className="block text-brown poppins-medium mb-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
-                Select City
-              </label>
-              <div className="relative"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
-                <select
-                  className="w-full p-2 border border-gray rounded appearance-none"
-                  value={selectedCity}
-                  onChange={(e) => setSelectedCity(e.target.value)}
-                >
-                  <option value="">City</option>
-                  <option value="Lahore">Lahore</option>
-                  <option value="Karachi">Karachi</option>
-                  <option value="Islamabad">Islamabad</option>
-                </select>
-                <AiOutlineDown className="absolute right-2 top-3 pointer-events-none" />
-              </div>
-            </div>
-            <div className="w-full md:w-1/4">
-              <label className="block poppins-medium mb-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">Sort by</label>
-              <div className="relative"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
-                <select
-                  className="w-full p-2 border border-gray rounded appearance-none"
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                >
-                  <option value="Videos">Videos</option>
-                  <option value="Date">Date</option>
-                  <option value="Popularity">Popularity</option>
-                </select>
-                <AiOutlineDown className="absolute right-2 top-3 pointer-events-none" />
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
-            {workshopsData.map((workshop) => (
+        </aside>
+        <main className="w-full md:w-3/4">
+          <Filters
+            selectedDate={selectedDate}
+            setSelectedDate={setSelectedDate}
+            selectedSchool={selectedSchool}
+            setSelectedSchool={setSelectedSchool}
+            selectedCity={selectedCity}
+            setSelectedCity={setSelectedCity}
+            sortBy={sortBy}
+            setSortBy={setSortBy}
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 py-5">
+            {currentWorkshops.map((workshop) => (
               <WorkshopCard key={workshop.id} workshop={workshop} />
             ))}
           </div>
-          <div className=" pt-10 w-1/3 bg-gray"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
-            <Pagination
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={handlePageChange}
-            />
-          </div>
-        </div>
+          <Pagination
+            currentPage={currentPage}
+            totalPages={Math.ceil(filteredWorkshops.length / workshopsPerPage)}
+            onPageChange={setCurrentPage}
+          />
+        </main>
       </div>
     </div>
   );

@@ -7,23 +7,9 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import Header from "../../header";
-import { FaChevronDown } from "react-icons/fa";
 import { useState } from "react";
 
 const Intro = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const services = [
-    "Robotic Workshops",
-    "Robotic Kits",
-    "After-School Robotics Clubs",
-    "Grade 1-8 Robotronics Curriculum.",
-    "Robotic Competitions (Management, Preparation and Consultation)",
-  ];
   
   return (
     <div className="internationalServices">
@@ -32,34 +18,6 @@ const Intro = () => {
       </div>
       <div className="space-y-5"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
           {/* As a School & Parent */}
-          <div className="w-full flex justify-center">
-          <div className=" relative inline-block text-left">
-            <button
-              type="button"
-              className="inline-flex justify-between w-full rounded-md border border-lin shadow-sm px-4 py-2 bg-dropbox poppins-extrabold text-gray hover:text-gold"
-              onClick={toggleDropdown}
-            >
-              Our Services
-              <FaChevronDown className="ml-2" />
-            </button>
-
-            {isOpen && (
-              <div className="origin-top-right absolute border border-lin mt-2 w-56 rounded-md shadow-lg bg-dropbox ring-1 hover:text-brown ring-black ring-opacity-5">
-                <div className="py-1">
-                  {services.map((service, index) => (
-                    <a
-                      key={index}
-                      href="#"
-                      className={`block px-4 py-2 text-sm text-wrap poppins-light text-gray hover:bg-yellow  hover:text-brown`}
-                    >
-                      {service}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
         {/* intro */}
         <div className="w-full pt-28">
           <div className="space-y-5 lg:p-10 p-4 lg:px-24 lg:w-1/2 ">
