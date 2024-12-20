@@ -19,6 +19,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
+  const [forgotEmail, setForgotEmail] = useState("");
+  const [forgotPasswordMode, setForgotPasswordMode] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -42,19 +44,86 @@ const Login = () => {
       const data = await response.json();
       console.log("Login successful:", data);
       saveLoginData(data);
-      // Display a success toast
       toast.success("Login successful!");
       window.location.href = "/";
-      // Handle successful login (e.g., save token, redirect, etc.)
-      // Example: localStorage.setItem('token', data.token);
     } catch (error) {
       console.error("Error during login:", error);
       setError(error.message);
-
-      // Display an error toast
       toast.error(error.message);
     }
   };
+
+  const handleForgotPassword = async (e) => {
+    e.preventDefault();
+    setError(null);
+
+    try {
+      const response = await fetch("http://localhost:8080/forgot-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: forgotEmail }),
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          "Failed to send password reset instructions. Please try again."
+        );
+      }
+
+      toast.success("Password reset instructions sent to your email.");
+      setForgotPasswordMode(false);
+      setForgotEmail("");
+    } catch (error) {
+      console.error("Error during password reset:", error);
+      setError(error.message);
+      toast.error(error.message);
+    }
+  };
+
+  if (forgotPasswordMode) {
+    return (
+      <div className="bg-gray" id="forgot-password">
+        <div className="p-5">
+          <Header />
+        </div>
+        <div className="flex flex-col items-center justify-center py-20">
+          <p className="text-4xl poppins-bold text-brown">Forgot Password</p>
+          <form
+            onSubmit={handleForgotPassword}
+            className="flex flex-col items-center space-y-4"
+          >
+            <div>
+              <p className="text-sm poppins-regular">Email address</p>
+              <input
+                className="border border-line rounded-xl py-3 lg:px-32 px-14 bg-gray"
+                type="email"
+                value={forgotEmail}
+                onChange={(e) => setForgotEmail(e.target.value)}
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-brown border border-line text-white poppins-regular rounded-3xl py-3 lg:px-32 px-14"
+            >
+              Send Reset Instructions
+            </button>
+            <button
+              type="button"
+              onClick={() => setForgotPasswordMode(false)}
+              className="text-brown underline mt-2"
+            >
+              Back to Login
+            </button>
+          </form>
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+        </div>
+        <ToastContainer />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-gray" id="signin">
@@ -62,7 +131,12 @@ const Login = () => {
         <Header />
       </div>
       <div>
-        <div className="flex flex-col lg:space-y-4 space-y-1 items-center justify-center lg:py-20 py-10"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+        <div
+          className="flex flex-col lg:space-y-4 space-y-1 items-center justify-center lg:py-20 py-10"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          data-aos-delay="4000"
+        >
           <p className="text-center text-wrap justify-center lg:py-10 py-5 text-4xl poppins-bold text-brown">
             Log in to your account
           </p>
@@ -79,16 +153,22 @@ const Login = () => {
             Continue with Apple
           </button>
         </div>
-        {/* or */}
-        <div className="flex flex-row justify-center items-center"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+        <div
+          className="flex flex-row justify-center items-center"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-delay="4000"
+        >
           <div className="h-0 lg:w-52 w-44 border border-line"></div>
           <p className="text-xl font-bold p-2">OR</p>
           <div className="h-0 lg:w-52 w-44 border border-line"></div>
         </div>
-        {/* inputs */}
         <form
           onSubmit={handleLogin}
-          className="flex flex-col items-center space-y-3"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"
+          className="flex flex-col items-center space-y-3"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          data-aos-delay="4000"
         >
           <div className="lg:py-8 py-4">
             <p className="text-sm poppins-regular ">Email address</p>
@@ -120,14 +200,14 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <a
-              href="/forgot-password"
+            <button
+              type="button"
+              onClick={() => setForgotPasswordMode(true)}
               className=" poppins-regular text-sm cursor-pointer font-bold underline underline-offset-4 text-right"
             >
               Forget your password
-            </a>
+            </button>
           </div>
-          {/* checkbox */}
           <div className="flex items-left lg:py-5 py-2">
             <input
               id="keep-signed-in"
@@ -147,9 +227,7 @@ const Login = () => {
           >
             Log in
           </button>
-          {/* Error Message */}
           {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
-          {/* line */}
           <div className="flex flex-row justify-center items-center">
             <div className="h-0 lg:w-56 w-44 border border-line"></div>
             <div className="h-0 lg:w-60 w-48 border border-line"></div>
@@ -164,7 +242,6 @@ const Login = () => {
           </div>
         </form>
       </div>
-      {/* Toast Container */}
       <ToastContainer />
     </div>
   );
