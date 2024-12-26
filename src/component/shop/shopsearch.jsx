@@ -18,19 +18,35 @@ const Shopsearch = () => {
   const productsPerPage = 9;
 
   useEffect(() => {
-    fetch("http://localhost:8080/getProducts")
-      .then((response) => response.json())
-      .then((data) => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/getProducts");
+        const data = await response.json();
         console.log("Fetched products:", data);
         setProducts(data);
-      })
-      .catch((error) => console.error("Error fetching products:", error));
-  }, []);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []); 
 
   // Filtered products based on search query
   const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(searchQuery.toLowerCase())
+    product.title && typeof product.title === 'string' 
+      ? product.title.toLowerCase().includes(searchQuery.toLowerCase())
+      : false
   );
+  
+
+  const handleSearchClick = () => {
+    console.log("Search button clicked");
+  };
+  
+  const handleArrowClick = () => {
+    console.log("Arrow button clicked");
+  };
 
   // Pagination logic
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -48,20 +64,20 @@ const Shopsearch = () => {
       <div className="flex-1 ">
         <div>
           {/* line 1 */}
-          <div className="lg:pt-16 pt-8"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+          <div className="lg:pt-16 pt-8" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
             <div className="h-0 w-full border border-lin"></div>
           </div>
           <div className="lg:flex md:flex lg:px-24 px-2 lg:pt-10 pt-5  justify-between items-center ">
             <div className="flex justify-between  w-full">
               <div className="flex">
-                <IoHomeOutline className="h-5" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"/>
-                <p className="px-3 lg:text-base poppins-bold  text-sm "data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+                <IoHomeOutline className="h-5" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000" />
+                <p className="px-3 lg:text-base poppins-bold  text-sm " data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
                   Main Page
                 </p>
               </div>
             </div>
 
-            <div className="w-2/3 flex justify-between space-x-5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+            <div className="w-2/3 flex justify-between space-x-5" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
               <div className="flex justify-between  w-full">
                 <div className="flex">
                   <FaHeart className="h-6" />
@@ -84,12 +100,12 @@ const Shopsearch = () => {
             </div>
           </div>
           {/* line 2 */}
-          <div className=" lg:pt-10 pt-5"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+          <div className=" lg:pt-10 pt-5" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
             <div className="h-0 w-full border border-lin"></div>
           </div>
         </div>
         {/* search-bars */}
-        <div className="lg:flex flex-row "data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
+        <div className="lg:flex flex-row " data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000">
           <div className="flex lg:text-4xl text-xl text-bold poppins-regular lg:w-1/5 self-center">
             Category
           </div>
@@ -99,7 +115,7 @@ const Shopsearch = () => {
             <div className="flex lg:space-x-3">
               {/* search */}
               <div className="flex flex-1">
-                <button className="border border-gray bg-white p-2" onClick="">
+                <button className="border border-gray bg-white p-2" onClick={handleSearchClick}>
                   <img src={icon} alt="" />
                 </button>
                 <input
@@ -112,7 +128,7 @@ const Shopsearch = () => {
               </div>
               {/* search */}
               <div className="flex ">
-                <button className="border border-gray bg-white" onClick="">
+                <button className="border border-gray bg-white" onClick={handleArrowClick}>
                   <img className="" src={arow} alt="" />
                 </button>
                 <input
@@ -126,7 +142,7 @@ const Shopsearch = () => {
         </div>
       </div>
       {/* block 2 */}
-      <div className="flex-1"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+      <div className="flex-1" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
         {/* parent */}
         <div className="flex ">
           <Shopfilter />

@@ -185,17 +185,26 @@ const ShopCoursesIntro = () => {
   const [selectedFilter, setSelectedFilter] = useState(""); // Filter state
 
 
-  console.log("courses", courses);
+  // console.log("courses", courses);
 
   useEffect(() => {
-    // Fetch courses from the API
-    fetch("http://localhost:8080/all/courses")
-      .then((response) => response.json())
-      .then((data) => setCourses(data.data))
-      .catch((error) => console.error("Error fetching courses:", error));
-  }, []);
+    const fetchCourses = async () => {
+      try {
+        // Fetch data from the backend
+        const response = await fetch("http://localhost:8080/all/courses");
+        const data = await response.json();
 
+        // Update state with the fetched data
+        // console.log(data);
+        setCourses(data);
+      } catch (error) {
+        console.error("Error fetching courses:", error);
+      }
+    };
 
+    fetchCourses();
+  }, []); 
+  console.log("Here Course ",courses);
   // Filter courses based on selected filter
   const filteredCourses =
     selectedFilter === ""
