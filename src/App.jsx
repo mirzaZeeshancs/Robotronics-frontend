@@ -31,6 +31,7 @@ import IHome from "./pages/International/home";
 import Screen from "./pages/SplashScreen/screen";
 import Search from "./component/search";
 import MyRobort from './pages/Dashboard/myRobot'
+import JobApplicationForm from "./component/careers/CareerDetailPage/jobApplicationForm";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
           {/* <Route path="/" element={<CareesFindRole />} /> */}
           <Route path="/send-resume" element={<SendResumeForm />} />
           <Route path="/CareerDetailPage" element={<CareerDetailPage />} />
+          <Route path="/job-application" element={<JobApplicationForm />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/BlogDetail" element={<BlogDetail />} />
           <Route path="/COntactUS" element={<COntactUS />} />

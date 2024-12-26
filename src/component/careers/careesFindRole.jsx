@@ -1,4 +1,6 @@
 import { FiArrowUpRight } from "react-icons/fi";
+// import { useNavigate } from "react-router-dom";
+import JobApplicationForm from "./CareerDetailPage/jobApplicationForm";
 
 import {
   FaFacebook,
@@ -14,7 +16,8 @@ const CareesFindRole = () => {
   const navigate = useNavigate();
 
   const handleSendResume = () => {
-    navigate("/send-resume"); // Change this to your form route
+    // Navigate to the job application form
+    navigate("/job-application"); // Use the path to your job application form
   };
 
   return (
@@ -22,7 +25,7 @@ const CareesFindRole = () => {
       {/* Left Section: Text and Buttons */}
       <div className="flex flex-col items-center lg:items-start text-center lg:text-left py-10">
         <p
-          className="text-wrap font-light text-brown text-3xl lg:text-5xl mb-5"
+          className="text-wrap font-light text-brown text-5xl lg:text-7xl mb-10"
           data-aos="fade-right"
           data-aos-duration="2000"
         >
@@ -64,7 +67,7 @@ const CareesFindRole = () => {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 border border-brown rounded-full hover:bg-brown hover:text-white transition transform hover:scale-105"
+            className="p-3 border border-brown rounded-xl hover:bg-brown hover:text-white transition transform hover:scale-105"
             data-aos="fade-left"
             data-aos-duration="2000"
             data-aos-delay={`${index * 300}`}

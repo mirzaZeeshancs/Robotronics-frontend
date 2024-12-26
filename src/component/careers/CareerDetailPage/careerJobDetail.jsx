@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import JobApplicationForm from "./jobApplicationForm";
 
 const CareerJobDetail = () => {
   const data = {
@@ -98,20 +99,20 @@ const CareerJobDetail = () => {
             apply!
           </p>
         </div>
-        <div className="space-y-5 lg:px-24"  >
+        {/* <div className="space-y-5 lg:px-24"  >
           <h1 className="text-4xl poppins-bold text-brown"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >Job Application</h1>
           <h2 className="text-xl poppins-light text-brown"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000"  >
             Submit your details and CV
           </h2>
-        </div>
+        </div> */}
 
-        <form
+        {/* <form
           onSubmit={handleSubmit}
           className="space-y-6 bg-background p-6 max-w-4xl mx-auto"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000"
         >
-          {/* Name */}
+          Name
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* First Name */}
+            First Name
             <div>
               <label
                 htmlFor="firstName"
@@ -130,7 +131,7 @@ const CareerJobDetail = () => {
                 required
               />
             </div>
-            {/* Last Name */}
+            Last Name
             <div>
               <label
                 htmlFor="lastName"
@@ -151,7 +152,7 @@ const CareerJobDetail = () => {
             </div>
           </div>
 
-          {/* Email */}
+          Email
           <div className="grid grid-cols-1">
             <div>
               <label
@@ -173,7 +174,7 @@ const CareerJobDetail = () => {
             </div>
           </div>
 
-          {/* Phone */}
+          Phone
           <div className="grid grid-cols-1">
             <div>
               <label
@@ -195,7 +196,7 @@ const CareerJobDetail = () => {
             </div>
           </div>
 
-          {/* Address */}
+          Address
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label
@@ -235,7 +236,7 @@ const CareerJobDetail = () => {
             </div>
           </div>
 
-          {/* Experience */}
+          Experience
           <div className="grid grid-cols-1">
             <div>
               <label
@@ -256,7 +257,7 @@ const CareerJobDetail = () => {
             </div>
           </div>
 
-          {/* Education */}
+          Education
           <div className="grid grid-cols-1">
             <div>
               <label
@@ -277,7 +278,7 @@ const CareerJobDetail = () => {
             </div>
           </div>
 
-          {/* Skills */}
+          Skills
           <div className="grid grid-cols-1">
             <div>
               <label
@@ -298,7 +299,7 @@ const CareerJobDetail = () => {
             </div>
           </div>
 
-          {/* CV Upload */}
+          CV Upload
           <div className="grid grid-cols-1">
             <div>
               <label
@@ -318,7 +319,7 @@ const CareerJobDetail = () => {
             </div>
           </div>
 
-          {/* Submit */}
+          Submit
           <div className="mt-6 space-y-4">
             <button
               type="submit"
@@ -327,7 +328,8 @@ const CareerJobDetail = () => {
               Submit Application
             </button>
           </div>
-        </form>
+        </form> */}
+        <JobApplicationForm/>
 
         <div className=" flex flex-row justify-between border border-smallText lg:p-10 p-5  rounded-xl">
           <p className="text-wrap text-brown poppins-medium lg:text-2xl  self-center ">
