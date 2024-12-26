@@ -3,14 +3,15 @@ import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/logo/Robotrinic.svg";
 import Aos from "aos";
 import { useSelector } from "react-redux";
-import { FaChevronDown } from "react-icons/fa";
+// import { FaChevronDown } from "react-icons/fa";
+import StarIcon from '@mui/icons-material/Star';
 
 
 export default function Header() {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [token, setToken] = useState(null);
-  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown
+  // const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items) || 0;
@@ -31,17 +32,17 @@ export default function Header() {
     setMenuOpen(!menuOpen);
   };
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
+  // const toggleDropdown = () => {
+  //   setDropdownOpen(!dropdownOpen);
+  // };
 
-  const services = [
-    "Robotic Workshops",
-    "Robotic Kits",
-    "After-School Robotics Clubs",
-    "Grade 1-8 Robotronics Curriculum.",
-    "Robotic Competitions (Management, Preparation and Consultation)",
-  ];
+  // const services = [
+  //   "Robotic Workshops",
+  //   "Robotic Kits",
+  //   "After-School Robotics Clubs",
+  //   "Grade 1-8 Robotronics Curriculum.",
+  //   "Robotic Competitions (Management, Preparation and Consultation)",
+  // ];
 
   const handleLogout = () => {
     sessionStorage.removeItem("token");
@@ -72,28 +73,68 @@ export default function Header() {
             >
               Home
             </NavLink>
-            {/* ... other NavLink items ... */}
+            <NavLink
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg "
+              to="/aboutUs"
+            >
+              Who We Are
+            </NavLink>
+            <NavLink
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              to="/International/Iservices"
+            >
+              Services
+            </NavLink>
+
+
+            <NavLink
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              to="/International/videoGallery"
+            >
+              Events
+            </NavLink>
+
+            <NavLink
+              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
+              to="/shop"
+            >
+              Shop
+            </NavLink>
+
+            <NavLink
+              className="cursor-pointer hover:text-black poppins-light hover:border-b hover:border-black text-black text-lg"
+              to="/International/home"
+            >
+              International
+            </NavLink>
+
             <NavLink
               className="cursor-pointer hover:text-black poppins-light hover:border-b hover:border-black text-black text-lg"
               to="/COntactUS"
             >
               Contact
             </NavLink>
+
             <NavLink
-              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg "
-              to="/aboutUs"
+              className="cursor-pointer hover:text-black poppins-light hover:border-b hover:border-black text-black text-lg font-bold bg-red-600"
+              to="/Dashboard/courseDetail"
             >
-              About Us
+              <StarIcon />
+              RoboGenius
+
             </NavLink>
+
+           
+            
             {/* Dropdown for Services */}
-            <div className="relative">
+            {/* <div className="relative">
               {/* <button
                 className="cursor-pointer hover:text-black poppins-light hover:border-b hover:border-black text-black text-lg"
                 onClick={toggleDropdown}
               >
                 Services
               </button> */}
-              <NavLink
+              {/* <NavLink
                 type="button"
                 className="flex cursor-pointer hover:text-black poppins-light hover:border-b hover:border-black text-black text-lg"
                 onMouseEnter={toggleDropdown} // Opens the dropdown on hover
@@ -103,8 +144,8 @@ export default function Header() {
               >
                 Our Services
                 {/* <FaChevronDown className="mt-[6px] ml-2" />y */}
-              </NavLink>
-              {dropdownOpen && (
+              {/* </NavLink> */}
+              {/* {dropdownOpen && (
                 <div
                 className="origin-top-right absolute border border-lin mt-2 w-72 rounded-md shadow-lg bg-dropbox ring-1 hover:text-brown ring-black ring-opacity-5" // Increased width to w-72
                 onMouseLeave={toggleDropdown} // Closes the dropdown when hovering out
@@ -121,44 +162,32 @@ export default function Header() {
                   ))}
                 </div>
               </div>
-              )}
-            </div>
-            <NavLink
+              )} */}
+            {/* </div>  */}
+            
+
+
+            {/* <NavLink
               className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/Course"
             >
               Courses
-            </NavLink>
-            <NavLink
-              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
-              to="/shop"
-            >
-              Shop
-            </NavLink>
-            <NavLink
-              className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
-              to="/International/videoGallery"
-            >
-              Events
-            </NavLink>
-            <NavLink
+            </NavLink> */}
+           
+            
+            {/* <NavLink
               className="mr-2 cursor-pointer poppins-light hover:text-black hover:border-b hover:border-black text-black text-lg"
               to="/Blog"
             >
               Blog
-            </NavLink>
-            <NavLink
-              className="cursor-pointer hover:text-black poppins-light hover:border-b hover:border-black text-black text-lg"
-              to="/International/home"
-            >
-              International
-            </NavLink>
-            <NavLink
+            </NavLink> */}
+           
+            {/* <NavLink
               className="cursor-pointer hover:text-black poppins-light hover:border-b hover:border-black text-black text-lg"
               to="/CareerJob"
             >
               Careers
-            </NavLink>
+            </NavLink> */}
           </div>
         </nav>
 
