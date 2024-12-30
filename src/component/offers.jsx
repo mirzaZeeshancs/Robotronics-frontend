@@ -20,11 +20,10 @@ const Offers = () => {
         </div>
         <div>
           <p className=" text-white poppins-bold text-wrap text-xl lg:text-2xl md:text-2xl">
-            Learn The Latest Skills
+          Innovations
           </p>
           <p className=" text-white text-wrap poppins-medium text-sm lg:text-l md:text-l">
-            Contrary to popular belief, Lorem Ipsum is not simply random text{" "}
-            <br /> . It has roots in a BC, making it over 2000 years old.
+          Innovation in robotics refers to the ability to develop new ideas, techniques or technologies that improve or redefine robotic systems.
           </p>
         </div>
       </div>
@@ -37,11 +36,11 @@ const Offers = () => {
         </div>
         <div>
           <p className=" text-white poppins-bold text-wrap text-xl lg:text-2xl md:text-2xl">
-            Learn The Latest Skills
+          Critical Thinking
+
           </p>
           <p className=" text-white text-wrap poppins-medium text-sm lg:text-l md:text-l">
-            Contrary to popular belief, Lorem Ipsum is not simply random text{" "}
-            <br /> . It has roots in a BC, making it over 2000 years old.
+          Critical thinking skills in robotics involve analyzing and evaluating problems logically to make informed decisions.
           </p>
         </div>
       </div>
@@ -54,11 +53,11 @@ const Offers = () => {
         </div>
         <div>
           <p className=" text-white poppins-bold text-wrap text-xl lg:text-2xl md:text-2xl">
-            Learn The Latest Skills
+          Problem Solving Ability
+
           </p>
           <p className=" text-white poppins-medium text-wrap text-sm lg:text-l md:text-l">
-            Contrary to popular belief, Lorem Ipsum is not simply random text{" "}
-            <br /> . It has roots in a BC, making it over 2000 years old.
+          Problem-solving ability in robotics focuses on identifying challenges and developing practical solutions through systematic approaches
           </p>
         </div>
       </div>

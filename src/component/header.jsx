@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import logo from "../assets/logo/Robotrinic.svg";
+import logo from "../assets/logo/robotronicsCharacter.svg";
 import Aos from "aos";
 import { useSelector } from "react-redux";
 // import { FaChevronDown } from "react-icons/fa";

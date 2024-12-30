@@ -36,17 +36,10 @@ const Header = () => (
         </div>
         <div className="mt-10" data-aos="fade-up">
             <p className="md:text-6xl text-3xl text-wrap text-left poppins-bold text-brown">
-                Educating The power of
-            </p>
-            <p className="md:text-6xl text-3xl text-wrap text-left poppins-bold text-yellow">
-                Robotics{' '}
-                <span className="md:text-6xl text-wrap text-3xl text-left font-extrabold text-brown">
-                    which was unthinkable
-                </span>
-            </p>
-            <p className="md:text-6xl text-wrap text-3xl text-left poppins-bold text-brown">
-                previously
-            </p>
+            Through
+             <span className="md:text-6xl text-3xl text-wrap text-left poppins-bold text-yellow">Robotics & STEM,</span>
+              we empower young minds to think critically, solve problems and turn imagination into innovation.            </p>
+            
         </div>
     </div>
 );
@@ -54,15 +47,14 @@ const Header = () => (
 const InfoSection = () => (
     <div className="w-2/3 md:mt-14 p-5 md:ml-20" data-aos="fade-up">
         <div className="md:text-3xl text-xl text-wrap text-left poppins-regular text-brown">
-            In 2017,
+        By 2024,
             <span className="md:text-5xl text-2xl text-wrap text-left poppins-semibold text-brown">
                 {' '}ROBOTRONICS
             </span>
             <div className="md:text-3xl text-xl text-wrap text-left poppins-regular text-brown">
-                contributed 10% to Pakistan's
+            holds 70% of the market in Pakistan’s Robotics Education Sector. 
             </div>
             <div className="md:text-3xl text-xl text-wrap text-left poppins-regular text-brown">
-                Educational growth
             </div>
         </div>
 

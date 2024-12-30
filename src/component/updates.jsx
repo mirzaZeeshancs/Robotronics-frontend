@@ -35,11 +35,8 @@ const Updates = () => {
             className="text-white text-wrap px-4 poppins-regular lg:px-24 text-sm lg:text-lg"
             data-aos="fade-right"
             data-aos-duration="2000"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            accusamus sint similique laboriosam temporibus quas illo sit
-            architecto. Alias nobis debitis ut obcaecati repudiandae totam.
-            Quasi quaerat a tempore vel?
+          >Be informed about the latest updates in the world of Robotics.	
+
           </h1>
 
           <img
@@ -72,9 +69,7 @@ const Updates = () => {
                 01
               </p>
               <p className="text-white lg:text-xl lg:p-3 poppins-thin  text-wrap">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.Animi
-                est numquam aperiam, obcaecati voluptate, doloremque distinctio
-                ducimus{" "}
+              Upcoming Headstart Robotics Competition in Islamabad on 14th-1th February 2025
               </p>
             </div>
             <div className="text-wrap">
@@ -82,9 +77,7 @@ const Updates = () => {
                 02
               </p>
               <p className="text-white lg:text-xl lg:p-3 poppins-thin text-wrap">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.Animi
-                est numquam aperiam, obcaecati voluptate, doloremque distinctio
-                ducimus{" "}
+              Robotics Exhibition being held in Cornerstone School and College Global Campus on 9th April 2025
               </p>
             </div>
             <div className="text-wrap">
@@ -92,9 +85,7 @@ const Updates = () => {
                 03
               </p>
               <p className="text-white lg:text-xl lg:p-3 poppins-thin text-wrap">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.Animi
-                est numquam aperiam, obcaecati voluptate, doloremque distinctio
-                ducimus{" "}
+              Major schools in Punjab incline towards the Robotronics Curriculum to be integrated in their Curriculum
               </p>
             </div>
           </div>

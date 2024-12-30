@@ -13,8 +13,7 @@ const AboutSquad = () => {
       <div className="lg:flex  lg:p-14 p-7">
         <p className="flex-1 lg:text-6xl poppins-semibold text-3xl font-bold "data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">OUR SQUAD</p>
         <p className="flex-1 text-wrap poppins-regular lg:text-4xl text-2xl"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
-          Our team is a tight-knit family of designers, artists, and
-          visionaries, all bound by the same creative enthusiasm.
+        Our team is a tight-knit family of engineers, developers, educators and visionaries, all bound by the same innovative approach and creative enthusiasm.
         </p>
       </div>
       {/* block 2 */}

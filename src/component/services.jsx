@@ -15,30 +15,57 @@ const Services = () => {
   }, []);
   const items = [
     {
-      title: "Robotic Items Shop",
+      title: "RoboGenius Program",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsum libero non veniam, nulla fuga itaque. Officia, autem! Fuga soluta architecto laboriosam iure porro officia dicta nulla esse, ducimus perspiciatis!",
+        "Region's Largest Robotics & Skill Development Online platform where Individuals and Schools can learn all the modern skills under one roof. RoboGenius Program enables the community to prepare a better future workforce.",
       imgSrc: <FaRobot />,
       // imgSrc: img1,
-      linkText: "Enrolled Now",
+      linkText: "Enroll Now",
       linkUrl: "#",
     },
     {
       title: "Robotics Workshop",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsum libero non veniam, nulla fuga itaque. Officia, autem! Fuga soluta architecto laboriosam iure porro officia dicta nulla esse, ducimus perspiciatis!",
+        "We offer a wide range of Robotics & STEM based workshops catering all the different age groups (Age 4-16) considering their areas of interest and mental abilities.",
       imgSrc: <FaWrench />,
       // imgSrc: img2,
-      linkText: "Enrolled Now",
+      linkText: "Enroll Now",
       linkUrl: "#",
     },
     {
       title: "Robotics Competitions",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsum libero non veniam, nulla fuga itaque. Officia, autem! Fuga soluta architecto laboriosam iure porro officia dicta nulla esse, ducimus perspiciatis!",
+        "We provide Training, Mentorship, Robots, Registrations, Judgement and Criteria Development Services to Students and Schools across Pakistan.",
       imgSrc: <FaTrophy />,
       // imgSrc: img3,
-      linkText: "Enrolled Now",
+      linkText: "Enroll Now",
+      linkUrl: "#",
+    },
+    {
+      title: "Robotoronics as a Subject:",
+      description:
+        "We have Developed and Implemented our 'Robotronics' Curriculum with most of the renowned educational systems. We provide Curriculum, Trainers and Robotic Labs.",
+      imgSrc: <FaTrophy />,
+      // imgSrc: img3,
+      linkText: "Enroll Now",
+      linkUrl: "#",
+    },
+    {
+      title: "After School Clubs:",
+      description:
+        "Robotics and Skill Development Clubs/Camps are conducted in large number of schools throughout the year with zero investment from the school.",
+      imgSrc: <FaTrophy />,
+      // imgSrc: img3,
+      linkText: "Enroll Now",
+      linkUrl: "#",
+    },
+    {
+      title: "Exhibition/Competiton Consultation:",
+      description:
+        "We provide schools with Exhibition and Competition Consultation services where we assist them in Judging, Training and Criteria Development Services.",
+      imgSrc: <FaTrophy />,
+      // imgSrc: img3,
+      linkText: "Enroll Now",
       linkUrl: "#",
     },
   ];

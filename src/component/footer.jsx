@@ -154,14 +154,14 @@ const Footer = () => {
               </div>
 
               {/* Launch Countdown */}
-              <div className="flex " >
+              <div className="flex my-4" >
                 {/* img */}
                 <div className="md:w-1/2 flex " >
                   <img src={mobile} className="h-64 hidden md:block" alt="" />
                   <img src={mobile}  className="h-64 hidden md:block"alt="" />
                 </div>
                 <div className="lg:w-1/2 md:2/3 flex flex-col flex-wrap items-center text-wrap lg:items-start text-center lg:text-left">
-                  <p className="text-2xl mb-2 text-white poppins-bold ">READY TO LAUNCH IN...</p>
+                  <p className="text-2xl text-white poppins-bold mb-8 ">READY TO LAUNCH IN...</p>
                   <div className="flex  justify-center lg:justify-start space-x-4 text-white" data-aos="fade-up">
                     <div className="text-center">
                       <p className="text-gold poppins-regular text-sm">WEEKS</p>
@@ -182,16 +182,16 @@ const Footer = () => {
                   </div>
 
                   {/* App Store Buttons */}
-                  <div className="flex flex-col gap-y-3">
-                    <button className="border border-white p-4 rounded-xl flex items-center space-x-2 hover:bg-gray-800 transition-colors duration-200"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
-                      <img className="h-11 w-10" src={apple} alt="apple" />
+                  <div className="flex flex-col gap-y-6 my-10">
+                    <button className="mb-4 border border-white p-4 rounded-xl flex items-center space-x-12 hover:bg-gray-800 transition-colors duration-200"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+                      <img className="h-11 w-14" src={apple} alt="apple" />
                       <div className="text-white">
                         <p className="text-sm text-wrap">Download on the</p>
                         <p className="text-2xl text-wrap font-bold">APP STORE</p>
                       </div>
                     </button>
-                    <button className="border border-white p-4 rounded-xl flex items-center space-x-2 hover:bg-gray-800 transition-colors duration-200" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
-                      <img className="h-11 w-10" src={pstore} alt="play-store" />
+                    <button className="border border-white p-4 rounded-xl flex items-center space-x-12 hover:bg-gray-800 transition-colors duration-200" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
+                      <img className="h-11 w-14" src={pstore} alt="play-store" />
                       <div className="text-white">
                         <p className="text-sm text-wrap ">Download on the</p>
                         <p className="text-2xl text-wrap font-bold">PLAY STORE</p>
