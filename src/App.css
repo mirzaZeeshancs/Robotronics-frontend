@@ -1,4 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer utilities {
+  .group-hover\:paused:hover .animate-loop-scroll {
+    animation-play-state: paused;
+  }
+}
 
 #root {
   max-width: 1280px;

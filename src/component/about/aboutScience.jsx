@@ -26,7 +26,6 @@ const AboutScience = () => {
           <div className="flex flex-row justify-between" >
             <div className="border-t border-yellow pt-4"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
               <h2 className="text-yellow pb-2 text-xl md:text-3xl "data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
-                Solving Small TO Big
               </h2>
             </div>
             <div className="bg-black">

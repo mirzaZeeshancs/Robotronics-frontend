@@ -31,7 +31,7 @@ const AboutVision = () => {
           <div>
             <p className="text-white lg:pb-4 pb-2 text-bold poppins-semibold lg:text-4xl text-2xl">VISION</p>
             <p className="text-wrap text-white poppins-light text-sm">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             sdfljsdlfjlj Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Temporibus non ipsum iure namshri dolor quam, enim sunt eligendi natus
               earum ex quasi possimus similique solutanamri reprehenderit voluptates
               laborum? Voluptatum, at!{" "}
@@ -62,7 +62,7 @@ const AboutVision = () => {
         <div className="p-2" >
           <img className=""data-aos="fade-down" data-aos-duration="2000" data-aos-delay="4000" src={quote} />
           <p className="lg:text-2xl text-xl text-gold poppins-light"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000" >Peter Nammy</p>
-          <p className="text-white  poppins-light"data-aos="fade-left" data-aos-duration="3000" data-aos-delay="6000" >Robotics Engineer</p>
+          <p className="text-white  poppins-light"data-aos="fade-left" data-aos-duration="3000" data-aos-delay="6000" >Curriculum Head</p>
         </div>
       </div>
     </div>

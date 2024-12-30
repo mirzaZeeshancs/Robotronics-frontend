@@ -22,7 +22,7 @@ const AboutRobotronics = () => {
           {/* col */}
           <div className="flex flex-col">
             <span className=" flex lg:text-yellow poppins-bold lg:text-4xl text-2xl text-right md:text4xl text-yellow text-wrap">
-              10+ YEARS
+              7+ YEARS
             </span>
             <span className=" flex lg:text-yellow poppins-bold lg:text-4xl text-2xl text-right md:text-4xl text-yellow text-wrap">
               OF EXPERIENCE
@@ -33,7 +33,7 @@ const AboutRobotronics = () => {
               ROBOTRONICS
             </span>
             <h2 className=" lg:text-black pt-4 poppins-light lg:text-xl text-sm md:text-xl text-black text-wrap ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi possimus, <br /> nihil nesciunt expedita dolorum asperiores exercitationem consequuntur <br /> quae totam laboriosam nobis a unde ea? Cumque necessitatibus <br /> voluptatem saepe nemo quisquam?
+            Robotronics Pakistan, founded in 2019, promotes robotics and STEM education across Pakistan. It collaborates with schools, universities and organizations like the British Council to offer workshops and skill development programs. The institute excels in national robotics competitions and emphasizes inclusivity. Its goal is to inspire young minds, foster critical thinking and bridge the STEM opportunity gap in the country.
             </h2>
             <img src={par} alt="parents" className="hidden lg:block lg:p-5 p-2" />
           </div>
@@ -52,7 +52,8 @@ const AboutRobotronics = () => {
               FROM CEO
             </span>
             <h2 className=" lg:text-black lg:pt-8 poppins-light pt-4 lg:text-xl text:sm md:text-xl text-black text-wrap ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi possimus, <br /> nihil nesciunt expedita dolorum asperiores exercitationem consequuntur <br /> quae totam laboriosam nobis a unde ea? Cumque necessitatibus <br /> voluptatem saepe nemo quisquam?
+            At Robotronics Pakistan, we are committed to shaping the innovators and problem-solvers of tomorrow through the transformative power of robotics and STEM education. Our mission is not just to teach technology but to ignite a passion for innovation and equip individuals with the skills necessary to thrive in the Industrial Revolution. 
+            Through hands-on learning and real-world applications, we inspire young minds to dream big and approach challenges with confidence. Together, we are cultivating a generation of leaders who will redefine industries, solve global problems and create a more sustainable and technologically advanced future. Join us on this journey of exploration, learning and empowerment to build a world where technology serves humanity.
             </h2>
             {/* robot img */}
             <div className="flex justify-end " >

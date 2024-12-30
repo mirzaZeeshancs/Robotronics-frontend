@@ -93,18 +93,16 @@ const Intro = () => {
                   </h1>
                 </div>
                 <div className="flex text-wrap">
-                  <p className="lg:text-8xl md:text-6xl text-4xl font-bold text-yellow poppins-bold">
+                  
+                  <p className="lg:text-8xl md:text-xl text-4xl font-bold text-white poppins-bold">
                     RO
                   </p>
-                  <p className="lg:text-8xl md:text-xl text-4xl font-bold text-white poppins-bold">
-                    BOTRONICS
+                  <p className="lg:text-8xl md:text-6xl text-4xl font-bold text-yellow poppins-bold">
+                  BOTRONICS
                   </p>
                 </div>
                 <p className="text-wrap text-sm poppins-light text-white">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Necessitatibus consequuntur aliquid fugit in recusandae velit
-                  quas soluta libero, sint modi obcaecati ad minus quibusdam
-                  iusto possimus molestiae pariatur amet officiis.
+                Your gateway to the future of Robotics, Coding and STEM Education. We offer hands-on learning experiences, empowering students of all ages to explore, create and innovate in the exciting world of Robotics.
                 </p>
               </div>
 

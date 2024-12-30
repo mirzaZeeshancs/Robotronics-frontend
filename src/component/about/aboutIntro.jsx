@@ -37,14 +37,11 @@ const Iaboutntro = () => {
                   <p className="lg:text-8xl md:text-xl text-4xl font-bold text-white poppins-bold">About Us</p>
                 </div>
                 <p className="text-wrap text-sm poppins-light text-white">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Necessitatibus consequuntur aliquid fugit in recusandae velit
-                  quas soluta libero, sint modi obcaecati ad minus quibusdam iusto
-                  possimus molestiae pariatur amet officiis.
+                Robotronics Pakistan (Pvt) Ltd is a pioneer educational institute dedicated to advancing robotics and STEM education across Pakistan since 2019. We are in collaboration with leading organizations and schools to empower youth with hands-on learning, fostering innovation, critical thinking and problem-solving skills.
                 </p>
               </div>
               {/* button */}
-              <div className="space-x-3"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
+              {/* <div className="space-x-3"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
                 <button
                   to="section2"
                   offset={-70}
@@ -59,7 +56,7 @@ const Iaboutntro = () => {
                 >
                   Get Started
                 </button>
-              </div>
+              </div> */}
               {/* socil icons */}
               <div className="flex flex-row space-x-2  lg:space-x-5">
                 <a
