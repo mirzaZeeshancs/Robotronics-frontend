@@ -1,6 +1,12 @@
 import img from "../assets/logo/online-test 1.svg";
 import img2 from "../assets/logo/exam 1.svg";
 import img3 from "../assets/logo/certification 1.svg";
+
+import logoo1 from "../assets/imagesContent/logos/logoo1.png"
+import logoo2 from "../assets/imagesContent/logos/logoo2.png"
+import logoo3 from "../assets/imagesContent/logos/logoo3.png"
+
+
 import { useEffect } from "react";
 import Aos from "aos";
 
@@ -15,7 +21,7 @@ const Offers = () => {
       <div className="flex-1 text-wrap flex lg:space-x-3" data-aos="fade-up">
         <div className="p-5">
           <div className="bg-lightyellow items-center rounded-3xl lg:p-5">
-            <img src={img} alt="image" className="" />
+            <img src={logoo1} alt="image" className="" />
           </div>
         </div>
         <div>
@@ -32,7 +38,7 @@ const Offers = () => {
       <div className="flex-1 text-wrap flex lg:space-x-3" data-aos="fade-up">
         <div className="p-5">
           <div className="bg-lightyellow items-center rounded-3xl lg:p-5">
-            <img src={img2} alt="image" className="" />
+            <img src={logoo2} alt="image" className="" />
           </div>
         </div>
         <div>
@@ -49,7 +55,7 @@ const Offers = () => {
       <div className="flex-1 text-wrap flex lg:space-x-3" data-aos="fade-up">
         <div className="p-5">
           <div className="bg-lightyellow items-center rounded-3xl lg:p-5">
-            <img src={img3} alt="image" className="" />
+            <img src={logoo3} alt="image" className="" />
           </div>
         </div>
         <div>
