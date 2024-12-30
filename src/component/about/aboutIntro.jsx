@@ -38,7 +38,7 @@ const Iaboutntro = () => {
                 </div>
                 <p className="text-wrap text-sm poppins-light text-white">
                 Robotronics Pakistan (Pvt) Ltd is a pioneer educational institute dedicated to advancing robotics and STEM education across Pakistan since 2019. We are in collaboration with leading organizations and schools to empower youth with hands-on learning, fostering innovation, critical thinking and problem-solving skills.
-                </p>
+                </p>  
               </div>
               {/* button */}
               {/* <div className="space-x-3"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">

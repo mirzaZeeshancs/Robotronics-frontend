@@ -20,15 +20,15 @@ const Offers = () => {
       {/* First image */}
       <div className="flex-1 text-wrap flex lg:space-x-3" data-aos="fade-up">
         <div className="p-5">
-          <div className="bg-lightyellow items-center rounded-3xl lg:p-5">
-            <img src={logoo1} alt="image" className="" />
+          <div className="h-40 w-40 bg-lightyellow items-center rounded-3xl lg:p-5">
+            <img src={logoo1} alt="image" className="ooverflow-hidden" />
           </div>
         </div>
-        <div>
+        <div className="mt-4">
           <p className=" text-white poppins-bold text-wrap text-xl lg:text-2xl md:text-2xl">
           Innovations
           </p>
-          <p className=" text-white text-wrap poppins-medium text-sm lg:text-l md:text-l">
+          <p className=" text-white text-wrap poppins-medium text-lg mt-4  lg:text-l md:text-l">
           Innovation in robotics refers to the ability to develop new ideas, techniques or technologies that improve or redefine robotic systems.
           </p>
         </div>
@@ -36,16 +36,16 @@ const Offers = () => {
       {/* Second image */}
       <div className="flex-1 text-wrap flex lg:space-x-3" data-aos="fade-up">
         <div className="p-5">
-          <div className="bg-lightyellow items-center rounded-3xl lg:p-5">
+          <div className="h-40 w-40 bg-lightyellow items-center rounded-3xl lg:p-5">
             <img src={logoo2} alt="image" className="" />
           </div>
         </div>
-        <div>
+        <div className="mt-4">
           <p className=" text-white poppins-bold text-wrap text-xl lg:text-2xl md:text-2xl">
           Critical Thinking
 
           </p>
-          <p className=" text-white text-wrap poppins-medium text-sm lg:text-l md:text-l">
+          <p className=" text-white text-wrap poppins-medium text-lg mt-4  lg:text-l md:text-l">
           Critical thinking skills in robotics involve analyzing and evaluating problems logically to make informed decisions.
           </p>
         </div>
@@ -53,16 +53,15 @@ const Offers = () => {
       {/* Third image */}
       <div className="flex-1 text-wrap flex lg:space-x-3" data-aos="fade-up">
         <div className="p-5">
-          <div className="bg-lightyellow items-center rounded-3xl lg:p-5">
+          <div className="h-40 w-40 bg-lightyellow items-center rounded-3xl lg:p-5">
             <img src={logoo3} alt="image" className="" />
           </div>
         </div>
-        <div>
+        <div className="mt-4">
           <p className=" text-white poppins-bold text-wrap text-xl lg:text-2xl md:text-2xl">
-          Problem Solving Ability
-
+          Problem Solving 
           </p>
-          <p className=" text-white poppins-medium text-wrap text-sm lg:text-l md:text-l">
+          <p className=" text-white poppins-medium text-wrap text-lg mt-4 lg:text-l md:text-l ">
           Problem-solving ability in robotics focuses on identifying challenges and developing practical solutions through systematic approaches
           </p>
         </div>
