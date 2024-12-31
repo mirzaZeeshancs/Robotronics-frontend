@@ -5,6 +5,12 @@ import img3 from "../assets/images/1.svg";
 import img4 from "../assets/images/2.svg";
 import img6 from "../assets/images/Rectangle 27.svg";
 import img7 from "../assets/images/Rectangle 31.svg";
+import p1 from "../assets/imagesContent/latestupdate/p1.jpg"
+import p2 from "../assets/imagesContent/latestupdate/p2.jpg"
+import p3 from "../assets/imagesContent/latestupdate/p3.jpg"
+import p4 from "../assets/imagesContent/latestupdate/p4.jpg"
+import p5 from "../assets/imagesContent/latestupdate/p5.jpg"
+import p6 from "../assets/imagesContent/latestupdate/p6.jpg"
 import { useEffect } from "react";
 import Aos from "aos";
 
@@ -43,7 +49,7 @@ const Updates = () => {
             className="w-full px-4 lg:px-24 py-4 object-cover"
             data-aos="fade-up"
             data-aos-duration="2000"
-            src={img1}
+            src={p6}
             alt="Cooking Image"
           />
         </div>
@@ -97,28 +103,28 @@ const Updates = () => {
           className="w-1/2 sm:w-1/3 md:w-1/4 p-2 sm:p-4 md:p-5 object-contain"
           data-aos="fade-down"
           data-aos-duration="2000"
-          src={img2}
+          src={img4}
           alt="Image 1"
         />
         <img
           className="w-1/2 sm:w-1/3 md:w-1/4 p-2 sm:p-4 md:p-5 object-contain"
           data-aos="fade-up"
           data-aos-duration="2000"
-          src={img3}
+          src={p2}
           alt="Image 2"
         />
         <img
           className="w-1/2 sm:w-1/3 md:w-1/4 p-2 sm:p-4 md:p-5 object-contain"
           data-aos="fade-down"
           data-aos-duration="2000"
-          src={img4}
+          src={p4}
           alt="Image 3"
         />
         <img
           className="w-1/2 sm:w-1/3 md:w-1/4 p-2 sm:p-4 md:p-5 object-contain"
           data-aos="fade-up"
           data-aos-duration="2000"
-          src={img3}
+          src={p3}
           alt="Image 2"
         />
       </div>
