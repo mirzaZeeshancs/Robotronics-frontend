@@ -1,8 +1,7 @@
-import ceo from "../../assets/images/aboutceo.svg";
-import par from '../../assets//images/aboutparent.svg';
 import c1 from "../../assets/imagesContent/aboutceo/c1.jpg"
 import c2 from "../../assets/imagesContent/aboutceo/c2.jpg"
-import cceoo from "../../assets/imagesContent/aboutceo/cceoo.jpg"
+// import cceoo from "../../assets/imagesContent/aboutceo/cceoo.jpg"
+import ceo from "../../assets/imagesContent/aboutceo/ceo.jpg"
 import robot from "../../assets/images/aboutrobot.svg"
 const AboutRobotronics = () => {
   return (
@@ -43,7 +42,7 @@ const AboutRobotronics = () => {
         </div>
         {/* div 2 */}
         <div className="flex-1 px-5 lg:pt-14"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="4000">
-          <img src={cceoo} alt="ceo" className="rounded-full" />
+          <img src={ceo} alt="ceo" className="rounded-full" />
         </div>
         {/* div 3 */}
         <div className="flex-1 pt-5 lg:pt-14"data-aos="fade-left" data-aos-duration="2000" data-aos-delay="4000">
