@@ -31,16 +31,19 @@ ChartJS.register(
 // Subcomponents
 const Header = () => (
     <div className="flex space-x-5 text-center bg-gray">
-        <div className='md:ml-20 p-5 md:mt-10'>
-            <img className="w-20 h-30" src={logo} alt="Logo" aria-label="Company Logo" />
+        <div className='md:ml-20 p-5'>
+            <img className="w-40 h-60" src={logo} alt="Logo" aria-label="Company Logo" />
         </div>
-        <div className="mt-10" data-aos="fade-up">
-            <p className="md:text-6xl text-3xl text-wrap text-left poppins-bold text-brown">
-            Through
-             <span className="md:text-6xl text-3xl text-wrap text-left poppins-bold text-yellow">Robotics & STEM,</span>
-              we empower young minds to think critically, solve problems and turn imagination into innovation.            </p>
-            
-        </div>
+        <div className="mt-14" data-aos="fade-up">
+        <p className="md:text-5xl text-3xl text-wrap text-left poppins-bold text-brown " style={{ lineHeight: '1.3' }}>
+            Through {' '}
+            <span className="md:text-6xl text-3xl text-wrap text-left poppins-bold text-yellow">
+                Robotics & STEM, {' '}
+        </span>
+            we empower <br></br> young minds to think critically, solve problems, and turn imagination into innovation.
+        </p>
+</div>
+
     </div>
 );
 
@@ -102,9 +105,16 @@ const Graph = () => {
         datasets: [
             {
                 label: '',
-                data: [60, 40, 70, 80, 100], // Adjusted data points for a slope
-                borderColor: 'rgb(249 159 14)', // Line color
-                backgroundColor: 'rgb(249 159 14)', // Line fill color
+                data: [60, 40, 70, 80, 100], // Adjusted data points for Line 1
+                borderColor: 'rgb(249 159 14)', // Line 1 color
+                backgroundColor: 'rgba(249, 159, 14, 0.2)', // Line 1 fill color
+                tension: 0.4, // Smoothness of the line
+            },
+            {
+                label: '',
+                data: [30, 50, 60, 90, 110], // Adjusted data points for Line 2
+                borderColor: 'black', // Line 2 color
+                backgroundColor: 'black', // Line 2 fill color
                 tension: 0.4, // Smoothness of the line
             },
         ],
