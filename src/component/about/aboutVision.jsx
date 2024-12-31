@@ -12,17 +12,8 @@ const AboutVision = () => {
           <div>
             <p className="text-white lg:pb-4 pb-2 text-bold poppins-semibold lg:text-4xl text-2xl">MISSION</p>
             <p className="text-wrap poppins-light text-white text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              dolores facere, ad quisquam id adipisci nihil, ipsum minus debitis
-              voluptate ullam, sapiente eum dignissimos doloremque voluptatum
-              in. Velit, molestias quidem.
-              <p className="py-2 poppins-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores, reprehenderit doloremque! Reprehenderit, similique.
-                Asperiores blanditiis a quasi fuga rerum voluptatem, assumenda
-                nostrum corrupti provident doloremque temporibus, obcaecati
-                dignissimos. Ipsum, nemo.
-              </p>
+            At Robotronics Pakistan, our mission is to revolutionize education by integrating Robotics and STEM into learning, fostering innovation and preparing the next generation for a technology-driven world. We aim to empower students with critical thinking, creativity and hands-on technical skills to transform them into leaders and innovators capable of addressing global challenges.
+            We are dedicated to building a strong foundation for a tech-savvy workforce that will lead Pakistan into a brighter future. Through our programs, we ensure that every student has the opportunity to learn, innovate and succeed in the ever-evolving fields of science and technology.
             </p>
           </div>
         </div>
@@ -31,17 +22,8 @@ const AboutVision = () => {
           <div>
             <p className="text-white lg:pb-4 pb-2 text-bold poppins-semibold lg:text-4xl text-2xl">VISION</p>
             <p className="text-wrap text-white poppins-light text-sm">
-             sdfljsdlfjlj Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Temporibus non ipsum iure namshri dolor quam, enim sunt eligendi natus
-              earum ex quasi possimus similique solutanamri reprehenderit voluptates
-              laborum? Voluptatum, at!{" "}
-              <p className="py-2 poppins-light ">
-                {" "}
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Obcaecati quibusdam id veniam, delectus nostrum debitis minima
-                esse dolore eum mollitia laborum eius blanditiis. Nobis, animi?
-                Incidunt similique ipsum culpa corporis.
-              </p>{" "}
+            Our vision at Robotronics Pakistan is to become a national leader in Robotics and STEM education, empowering students to shape the future with Innovation and Technology. We aim to create a generation of skilled individuals who can confidently contribute to the advancement of Pakistan’s Industries and the Global Technological Landscape.
+            We envision a world where every student has access to cutting-edge tools and knowledge, fostering creativity and critical thinking to solve real-world problems. By nurturing talent and breaking barriers in Robotics & STEM education, we strive to drive economic growth, sustainable development and a culture of innovation in Pakistan.
             </p>
           </div>
         </div>
@@ -51,11 +33,7 @@ const AboutVision = () => {
         <div>
           <blockquote>
             <p className="lg:text-2xl text-sm italic poppins-light text-wrap font-medium text-white dark:text-white"data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
-              At Everyday Robots, we are building machines to learn and operate
-              alongside us.Given our progress so far,I am confident helper robots
-              will add tremendous value to society.They will work alongside us,
-              help care for us as we age and improve our lives in ways that are
-              unimaginable.
+            Robotics is not just about building machines; it's about creating opportunities to rethink how we solve problems, improve lives and explore new frontiers. It blends the ingenuity of human creativity with the precision of technology to shape a future where innovation knows no bounds. Robotics empowers us to transform imagination into reality, forming a formidable connection between what is and what could be, as we build a smarter, more sustainable world together.
             </p>
           </blockquote>
         </div>

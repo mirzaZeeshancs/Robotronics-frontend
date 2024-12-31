@@ -71,15 +71,11 @@ const InfoSection = () => (
     <div className="flex flex-col mt-5">
         <div className="flex items-center space-x-4">
             <img src={circleg} alt="Progress" className="mr-2" aria-label="Progress Circle" />
-            <span>Progress</span>
+            <span>No. of Students</span>
         </div>
         <div className="flex items-center space-x-4">
             <img src={circleb} alt="Target" className="mr-2" aria-label="Target Circle" />
-            <span>Target</span>
-        </div>
-        <div className="flex items-center space-x-4">
-            <img src={circleb} alt="Future" className="mr-2" aria-label="Future Circle" />
-            <span>Future</span>
+            <span>No. of Schools</span>
         </div>
     </div>
 </div>

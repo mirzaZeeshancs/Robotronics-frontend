@@ -39,7 +39,7 @@ const ContactUsForm = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://your-backend-endpoint.com/contact", // replace with your actual endpoint
+        "http://localhost:8080/contact", // replace with your actual endpoint
         {
           method: "POST",
           headers: {
