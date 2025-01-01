@@ -127,11 +127,11 @@ const Intro = () => {
               {/* Social Icons */}
               <div className="flex flex-row space-x-2 lg:space-x-5">
                 {[
-                  { href: "https://www.facebook.com", icon: <FaFacebook /> },
-                  { href: "https://www.twitter.com", icon: <FaTwitter /> },
-                  { href: "https://www.youtube.com", icon: <FaYoutube /> },
-                  { href: "https://www.instagram.com", icon: <FaInstagram /> },
-                  { href: "https://www.linkedin.com", icon: <FaLinkedin /> },
+                  { href: "https://www.facebook.com/robotronicspakistan/", icon: <FaFacebook /> },
+                  { href: "https://twitter.com/robotronicspk", icon: <FaTwitter /> },
+                  { href: "https://www.youtube.com/channel/UCx_R7IwRAVvphBpI0DCvCXw", icon: <FaYoutube /> },
+                  { href: "https://www.instagram.com/robotronicspk/?hl=en", icon: <FaInstagram /> },
+                  { href: "https://www.linkedin.com/company/robotronicspakistan/posts/?feedView=all", icon: <FaLinkedin /> },
                   { href: "https://api.whatsapp.com/send?phone=1234567890", icon: <FaWhatsapp /> },
                 ].map(({ href, icon }, index) => (
                   <a
