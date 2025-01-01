@@ -12,7 +12,7 @@ const ShopCart = () => {
           <p className="text-brown font-bold text-wrap lg:text-4xl text-2xl poppins-bold text-center self-center ">
             SHOPING CART
           </p>
-          <p className="text-brown text-sm text-wrap text-center poppins-semibold self-center ">
+          <p className="text-brown text-sm text-wrap text-center poppins-semibold self-center mt-4 text-light opacity-85 ">
             THIS IS YOUR CART BASED ON WHAT YOU WANTED
           </p>
         </div>
