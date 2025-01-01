@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/logo/robotronicsCharacter.svg";
+import basket from "../assets/logo/basket.svg";
+
 import Aos from "aos";
 import { useSelector } from "react-redux";
 // import { FaChevronDown } from "react-icons/fa";
@@ -234,7 +236,8 @@ export default function Header() {
                 navigate("/cart");
               }}
             >
-              <span className="text-2xl">🛒</span>
+              {/* <span className="text-2xl">🛒</span> */}
+              <img src={basket} alt="basket"></img>
               {totalItems > 0 && (
                 <span className="absolute top-[-8px] right-[-10px] bg-red-600 text-white rounded-full text-xs font-bold px-2">
                   {totalItems}
