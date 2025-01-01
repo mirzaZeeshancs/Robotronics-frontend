@@ -7,6 +7,7 @@ import robot from "../assets/images/SignupRobot.svg";
 import facebook from "../assets/images/Facebooklogo.svg";
 import google from "../assets/images/Googlelogo.svg";
 import apple from "../assets/images/Applelogo.svg";
+import Footer from "../component/footer";
 
 const Signup = () => {
   const [firstName, setFirstName] = useState("");
@@ -216,6 +217,7 @@ const Signup = () => {
         </div>
       </div>
       <ToastContainer />
+      <Footer />
     </div>
   );
 };

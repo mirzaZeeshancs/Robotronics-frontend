@@ -79,15 +79,15 @@ const CartsStep = () => {
         <p>{steps[currentStep].content}</p>
       </div>
       <div className="flex justify-between">
-        <button
+        {/* <button
           className={`${
             currentStep === 0 ? "bg-gray" : "bg-green-400 cursor-pointer"
           } flex p-2 rounded`}
           onClick={handlePrevious}
           disabled={currentStep === 0}
-        >
-          <BiSolidSkipPreviousCircle className="self-center mr-2" /> Previous
-        </button>
+        > */}
+          {/* <BiSolidSkipPreviousCircle className="self-center mr-2" /> Previous */}
+        {/* </button> */}
         {/* <button
           onClick={handleNext}
           disabled={currentStep === steps.length - 1}
