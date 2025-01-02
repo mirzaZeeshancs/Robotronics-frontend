@@ -58,7 +58,7 @@ const Intro = () => {
             {/* socil icons */}
             <div className="flex flex-row space-x-5">
               <a
-                href="https://www.facebook.com"data-aos="fade-up" data-aos-duration="2000"
+                href="https://www.facebook.com/robotronicspakistan/"data-aos="fade-up" data-aos-duration="2000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -66,7 +66,7 @@ const Intro = () => {
                 <FaFacebook className="text-brown" />
               </a>
               <a
-                href="https://www.twitter.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
+                href="https://twitter.com/robotronicspk"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border   border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -74,7 +74,7 @@ const Intro = () => {
                 <FaTwitter className="text-brown" />
               </a>
               <a
-                href="https://www.youtube.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
+                href="https://www.youtube.com/channel/UCx_R7IwRAVvphBpI0DCvCXw"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -82,7 +82,7 @@ const Intro = () => {
                 <FaYoutube className="text-brown" />
               </a>
               <a
-                href="https://www.instagram.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1200"
+                href="https://www.instagram.com/robotronicspk/?hl=en"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1200"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -90,7 +90,7 @@ const Intro = () => {
                 <FaInstagram className="text-brown" />
               </a>
               <a
-                href="https://www.linkedin.com"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500"
+                href="https://www.linkedin.com/company/robotronicspakistan/posts/?feedView=all"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
@@ -98,7 +98,7 @@ const Intro = () => {
                 <FaLinkedin className="text-brown" />
               </a>
               <a
-                href="https://api.whatsapp.com/send?phone=1234567890"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1700"
+                href="https://wa.me/message/TKZZPIE2A34UM1"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1700"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:p-3 p-1 border  border-brown bg-white rounded-xl hover:bg-white hover:text-brown"
