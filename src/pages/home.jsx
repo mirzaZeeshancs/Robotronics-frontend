@@ -8,11 +8,13 @@ import Shop from "../component/shop";
 import Testimonial from "../component/testimonial";
 import Updates from "../component/updates";
 import BoToBtn from "../component/goToBtn";
+import Marquees from "../component/marquees";
+
 const Home = () => {
   return (
     <div className="flex flex-col">
       <Intro />
-      <SchoolLogos />
+      <Marquees/>
       <Graph />
       <Services />
       <Offers />

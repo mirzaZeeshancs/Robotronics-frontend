@@ -44,7 +44,7 @@ const Event = () => {
 
   return (
     <div className="flex flex-row bg-background p-5">
-      <h2 className="w-1/5 text-left lg:px-10 items-center lg:text-6xl text-2xl text-wrap text-brown poppins-bold">
+      <h2 className="w-1/5 text-left lg:px-10 mr-4 items-center lg:text-6xl text-2xl text-wrap text-brown poppins-bold">
         Upcoming Events
       </h2>
       <div className="flex flex-row  space-x-4">

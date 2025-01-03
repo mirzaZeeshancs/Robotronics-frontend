@@ -7,15 +7,17 @@ import Footer from "../../component/footer";
 import Upcoming from "../../component/international/internationalPage/upcoming";
 import Events from "../../component/international/internationalPage/event";
 import Shop from "../../component/international/internationalPage/Shop";
+import Marquees from "../../component/marquees";
 const IHome = () => {
   return (
     <div>
       <Intro />
-      <SchoolLogos />
+      {/* <SchoolLogos /> */}
+      <Marquees/>
       <Upcoming />
-      <div className="hidden lg:block ">
+      {/* <div className="hidden lg:block "> */}
         <Events />
-      </div>
+      {/* </div> */}
       <Offers />
       <Shop />
       <Updates />

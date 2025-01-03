@@ -19,8 +19,8 @@ const Offers = () => {
     <div className="lg:flex justify-between space-y-5 lg:space-y-0 bg-yellow lg:p-10 p-5 "data-aos="fade-left" data-aos-duration="2000">
       {/* First image */}
       <div className="flex-1 text-wrap flex lg:space-x-3" data-aos="fade-up">
-        <div className="p-5">
-          <div className="h-40 w-40 bg-lightyellow items-center rounded-3xl lg:p-5">
+        <div className="p-5 flex items-center">
+          <div className="h-32 w-32 bg-lightyellow items-center rounded-3xl lg:p-5">
             <img src={logoo1} alt="image" className="ooverflow-hidden" />
           </div>
         </div>
@@ -35,8 +35,8 @@ const Offers = () => {
       </div>
       {/* Second image */}
       <div className="flex-1 text-wrap flex lg:space-x-3" data-aos="fade-up">
-        <div className="p-5">
-          <div className="h-40 w-40 bg-lightyellow items-center rounded-3xl lg:p-5">
+        <div className="p-5 flex items-center">
+          <div className="h-32 w-32 bg-lightyellow items-center rounded-3xl lg:p-5">
             <img src={logoo2} alt="image" className="" />
           </div>
         </div>
@@ -52,8 +52,8 @@ const Offers = () => {
       </div>
       {/* Third image */}
       <div className="flex-1 text-wrap flex lg:space-x-3" data-aos="fade-up">
-        <div className="p-5">
-          <div className="h-40 w-40 bg-lightyellow items-center rounded-3xl lg:p-5">
+        <div className="p-5 flex items-center">
+          <div className="h-32 w-32 bg-lightyellow items-center rounded-3xl lg:p-5">
             <img src={logoo3} alt="image" className="" />
           </div>
         </div>
