@@ -79,12 +79,12 @@ const Intro = () => {
             </div>
           </div> */}
 
-          <div className="flex justify-between w-full py-16 px-20">
+          <div className="flex justify-between w-full p-10">
             {/* text */}
-            <div className="flex flex-col justify-between space-y-5 mt-32 lg:w-1/2" data-aos="fade-right" data-aos-duration="2000">
+            <div className="space-y-5 pt-32 lg:w-1/2" data-aos="fade-right" data-aos-duration="2000">
               {/* Text */}
-              <div className="space-y-2  flex flex-col gap-6" data-aos="fade-right" data-aos-duration="2000">
-                <div className="flex flex-row  space-x-2 ">
+              <div className="space-y-2" data-aos="fade-right" data-aos-duration="2000">
+                <div className="flex flex-row space-x-2">
                   <h1 className="lg:text-3xl md:text-2xl text-white poppins-thin">
                     WELCOME TO THE{" "}
                   </h1>
@@ -101,11 +101,13 @@ const Intro = () => {
                   BOTRONICS
                   </p>
                 </div>
-                <p className="text-wrap text-sm poppins-light text-white mb-10">
+                <p className="text-wrap text-sm poppins-light text-white">
                 Your gateway to the future of Robotics, Coding and STEM Education. We offer hands-on learning experiences, empowering students of all ages to explore, create and innovate in the exciting world of Robotics.
                 </p>
-                {/* Buttons */}
-              <div className="space-x-3 mt-10" data-aos="fade-right" data-aos-duration="2000">
+              </div>
+
+              {/* Buttons */}
+              <div className="space-x-3" data-aos="fade-right" data-aos-duration="2000">
                 <button
                   to="section2"
                   offset={-70}
@@ -121,9 +123,6 @@ const Intro = () => {
                   Get Started
                 </button>
               </div>
-              </div>
-
-              
 
               {/* Social Icons */}
               <div className="flex flex-row space-x-2 lg:space-x-5">

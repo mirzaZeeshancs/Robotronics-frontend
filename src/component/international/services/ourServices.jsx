@@ -1,41 +1,46 @@
-// import robot from "../../../assets/images/IServicesS4.svg"; // Import fallback image
 
-import python from "../../../assets/imagesContent/coursesimages/python.svg"
-import ai from "../../../assets/imagesContent/coursesimages/ai.svg"
-import scratch from "../../../assets/imagesContent/coursesimages/scratch.svg"
-import wordpress from "../../../assets/imagesContent/coursesimages/wordpress.svg"
-import video from "../../../assets/imagesContent/coursesimages/video.svg"
-import financialmanagement from "../../../assets/imagesContent/coursesimages/financialmanagement.svg"
+import { useEffect, useState } from "react"; // Import useEffect and useState
+import robot from "../../../assets/images/IServicesS4.svg"; // Consider removing unused imports
 
 const OurServices = () => {
-  // Local JSON data for services
-  const services = [
-    {
-      title: "Python",
-      imgSrc: python, // Update this path or use robot as fallback
-    },
-    {
-      title: "Scratch",
-      imgSrc: scratch, // Update this path or use robot as fallback
-    },
-    {
-      title: "Artifical Intellignce",
-      imgSrc: ai, // Update this path or use robot as fallback
-    },
-    {
-      title: "Wordpress Development",
-      imgSrc: wordpress, // Update this path or use robot as fallback
-    },
-    {
-      title: "Video Editing",
-      imgSrc: video, // Update this path or use robot as fallback
-    },
-    {
-      title: "Financial Management",
-      imgSrc: financialmanagement, // Update this path or use robot as fallback
-    },
-    // Add more services as needed
-  ];
+  const [services, setServices] = useState([]); // State to hold services
+  const [loading, setLoading] = useState(true); // State for loading status
+  const [error, setError] = useState(null); // State for any error that occurs
+
+  // Function to fetch services
+  const fetchServices = async () => {
+    setLoading(true); // Set loading to true when fetching starts
+    try {
+      const response = await fetch("http://localhost:8080/services");
+      
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+  
+      const data = await response.json();
+      
+      if (data.success) {
+        setServices(data.services); // Update state with fetched services
+      } else {
+        throw new Error("Failed to fetch services");
+      }
+    } catch (err) {
+      console.error(err); // Log the error to the console for debugging
+      setError(err.message); // Update error state
+    } finally {
+      setLoading(false); // Set loading to false when fetch is complete
+    }
+  };
+  
+  // Use useEffect to fetch services when component mounts
+  useEffect(() => {
+    fetchServices();
+  }, []);
+
+  // Show loading state
+  if (loading) return <div>Loading...</div>;
+  // Show error message if there's an error
+  if (error) return <div>{error}</div>;
 
   return (
     <div className="OurServices p-20">

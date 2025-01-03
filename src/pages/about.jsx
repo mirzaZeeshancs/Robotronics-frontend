@@ -6,7 +6,6 @@ import AboutSquad from "../component/about/aboutSquad"
 import Schoollgoso from "../component/schoollogos"
 import Footer from "../component/footer"
 import Gotobtn from "../component/goToBtn"
-import Marquees from "../component/marquees";
 const About = () => {
   return (
     <div className="flex flex-col" >
@@ -15,8 +14,7 @@ const About = () => {
       <AboutScience/>
       <AboutVision/>
       <AboutSquad/>
-      {/* <Schoollgoso/> */}
-      <Marquees/>
+      <Schoollgoso/>
       <Gotobtn/>
       <Footer/>
     </div>

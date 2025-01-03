@@ -88,59 +88,65 @@ const Shop = () => {
             </div>
           </div>
           {/* Two circular buttons on the right  */}
-          {/* <div className="flex self-center gap-x-2">
+          <div className="flex self-center gap-x-2">
             <button className="flex lg:w-20 w-10 h-10 lg:h-20 justify-center items-center rounded-full border border-black ">
               <FaArrowLeft className="text-yellow" />
             </button>
             <button className="flex lg:w-20 lg:h-20 w-10 h-10 justify-center items-center rounded-full border border-black ">
               <FaArrowRight className="text-yellow" />
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
       {/* Shop Items */}
-      <div className="md:px-10 px-5 pb-10">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-    {courses.map((course) => (
-      <div
-        key={course.id}
-        className="max-w-sm rounded overflow-hidden p-2 shadow-lg bg-white"
-      >
-        <img className="w-full" src={course.image} alt="Course" />
-        <div className="px-4 py-4">
-          <div className="flex justify-between items-center">
-            <p className="text-gray-700 poppins-bold rounded-lg px-2 text-base">
-              {course.category}
-            </p>
-            <div className="flex items-center">
-              <FaStar style={{ color: "#f8bc24" }} />
-              <p className="text-gray-700 text-base ml-2">
-                {course.rating} ({course.reviews} Reviews)
-              </p>
-            </div>
-          </div>
-          <div className="poppins-bold text-xl my-4">{course.title}</div>
-          <div className="flex items-center">
-            <p className="text-gray-700 mr-2">by</p>
-            <h3 className="text-line poppins-light text-xl">{course.author}</h3>
-          </div>
-        </div>
-        <div className="flex items-center justify-center my-2">
-          <button
-            style={{ backgroundColor: "#ffc224" }}
-            className="text-white poppins-bold py-2 px-4 rounded-full"
+      <div className="md:px-32 px-20 pb-10 flex flex-row flex-wrap gap-20">
+        {courses.map((course) => (
+          <div
+            key={course.id}
+            className="max-w-sm rounded overflow-hidden p-2 shadow-lg bg-white "
           >
-            <div className="flex items-center">
-              <p className="poppins-medium text-xl px-4">Notify Me</p>
-              <MdOutlineNotificationsActive className="text-center text-xl" />
-            </div>
-          </button>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
+            <img className="w-full" src={course.image} alt="Course" />
+            <div className="lg:px-6 py-4">
+              <div className="lg:flex flex-row justify-between">
+                <p className="text-gray-700 poppins-bold rounded-lg px-2 bg- text-base">
+                  {course.category}
+                </p>
+                {/* Stars */}
+                <div className="flex items-center">
+                  <FaStar style={{ color: "#f8bc24" }} />
+                  <p className="text-gray-700 text-base ml-2">
+                    {course.rating} ({course.reviews} Reviews)
+                  </p>
+                </div>
+              </div>
+              <div className="poppins-bold text-xl text-wrap my-4">
+                {course.title}
+              </div>
 
+              <div className="flex items-center">
+                <p className="text-gray-700 mr-2">by</p>
+                <h3 className="text-line poppins-light text-xl">
+                  {course.author}
+                </h3>
+              </div>
+
+              {/* <p className="flex flex-row text-gray-700 text-base bg-red-500"> */}
+              {/* <p className="text-line poppins-light">by</p>
+                {course.author} */}
+              {/* </p> */}
+            </div>
+
+            <div className=" flex items-center justify-center my-2">
+              <button style={{backgroundColor: "#ffc224"}} className=" text-white poppins-bold py-2 px-4 rounded-full">
+                <div className="flex items-center">
+                  <p className="poppins-medium text-xl px-4">Notify Me</p>
+                  <MdOutlineNotificationsActive  className="text-center text-xl" />
+                </div>
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
