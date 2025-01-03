@@ -5,8 +5,6 @@ import python from "../assets/images/python.svg";
 import time from "../assets/logo/time-svgrepo-com 1.svg";
 import download from "../assets/logo/download.svg";
 import sale from "../assets/logo/sales.svg";
-import leftArrow from "../assets/logo/arrow-up-left.svg";
-import rightArrow from "../assets/logo/arrow-up-right.svg";
 
 const ServiceCard = ({ service }) => {
   return (
@@ -59,9 +57,6 @@ const Shop = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const servicesPerPage = 3;
 
   useEffect(() => {
     Aos.init();
@@ -73,7 +68,7 @@ const Shop = () => {
           throw new Error("Failed to fetch services data");
         }
         const data = await response.json();
-        setServices(data || []);
+        setServices(data.slice(0, 3) || []); // Limit to first 3 items
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -84,26 +79,8 @@ const Shop = () => {
     fetchServices();
   }, []);
 
-  const handleNext = () => {
-    if (currentIndex + servicesPerPage < services.length) {
-      setCurrentIndex(currentIndex + servicesPerPage);
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentIndex - servicesPerPage >= 0) {
-      setCurrentIndex(currentIndex - servicesPerPage);
-    }
-  };
-
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
-
-  const visibleServices = services.slice(
-    currentIndex,
-    currentIndex + servicesPerPage
-  );
-
   console.log(services)
 
   return (
@@ -121,35 +98,11 @@ const Shop = () => {
                 Gear up for some Fun
               </div>
             </div>
-            <div className="flex self-center gap-x-2">
-              <button
-                onClick={handlePrevious}
-                disabled={currentIndex === 0}
-                className="flex lg:w-20 w-10 h-10 lg:h-20 justify-center items-center rounded-full border border-black"
-              >
-                <img
-                  className="lg:w-12 lg:h-12 w-6 h-6"
-                  src={leftArrow}
-                  alt="Previous"
-                />
-              </button>
-              <button
-                onClick={handleNext}
-                disabled={currentIndex + servicesPerPage >= services.length}
-                className="flex lg:w-20 lg:h-20 w-10 h-10 justify-center items-center rounded-full border border-black"
-              >
-                <img
-                  className="lg:w-12 lg:h-12 w-6 h-6"
-                  src={rightArrow}
-                  alt="Next"
-                />
-              </button>
-            </div>
           </div>
         </div>
         <div className="flex justify-center items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-            {visibleServices.map((service, index) => (
+            {services.map((service, index) => (
               <ServiceCard key={index} service={service} />
             ))}
           </div>
