@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Aos from "aos";
 import robo from "../assets/logo/Robotrinic.svg";
-import python from "../assets/images/python.svg";
+import ai from "../assets/imagesContent/coursesimages/ai.svg";
+import cyber from "../assets/imagesContent/coursesimages/cyber.svg";
+import python from "../assets/imagesContent/coursesimages/python.svg";
 import time from "../assets/logo/time-svgrepo-com 1.svg";
 import download from "../assets/logo/download.svg";
 import sale from "../assets/logo/sales.svg";
 import leftArrow from "../assets/logo/arrow-up-left.svg";
 import rightArrow from "../assets/logo/arrow-up-right.svg";
+import { MdOutlineNotificationsActive } from "react-icons/md";
+
 
 const ServiceCard = ({ service }) => {
   return (
@@ -15,15 +19,16 @@ const ServiceCard = ({ service }) => {
         <img
           className="rounded-xl w-full object-cover object-center"
           src={service.image.url}
-          alt={'image'}
+          alt={"Service Image"}
         />
-        <div className="flex flex-row justify-between">
-          <h3 className="lg:text-lg text-sm font-bold poppins-extrabold py-5">
+        <div className="flex flex-row justify-between items-center ">
+          <h3 className="lg:text-lg text-sm font-bold poppins-extrabold py-5 items-center text-center">
             {service.title || "Unnamed Service"}
           </h3>
           <div className="flex flex-col space-y-3">
-            <img className="p-2" src={service.imgIcon} alt="Service Icon" />
-            <p className="text-yellow poppins-bold">{service.price || "Free"}</p>
+            <p className="text-yellow poppins-bold">
+              {service.price || "Free"}
+            </p>
           </div>
         </div>
         <div className="pb-4">
@@ -45,10 +50,11 @@ const ServiceCard = ({ service }) => {
         </div>
       </div>
       <div className="p-5" data-aos="fade-up">
-        <div className="bg-yellow p-5 rounded flex justify-center items-center">
+        <div className="bg-yellow p-5 rounded flex justify-center items-center gap-4">
           <button className="text-xl font-bold" data-aos="fade-up">
-            Join Course
+            Notify Me
           </button>
+          <MdOutlineNotificationsActive className="text-2xl"/>
         </div>
       </div>
     </div>
@@ -56,33 +62,67 @@ const ServiceCard = ({ service }) => {
 };
 
 const Shop = () => {
-  const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const servicesPerPage = 3;
 
-  useEffect(() => {
-    Aos.init();
-
-    const fetchServices = async () => {
-      try {
-        const response = await fetch("http://localhost:8080/all/Courses");
-        if (!response.ok) {
-          throw new Error("Failed to fetch services data");
-        }
-        const data = await response.json();
-        setServices(data || []);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
-
-    fetchServices();
-  }, []);
+  const services = [
+    {
+      title: "Artifical Intelligence for Beginners",
+      price: "$49.99",
+      duration: "4 weeks",
+      courses: "5",
+      sales: "120",
+      imgIcon: ai,
+      image: { url: ai }, // Use imported asset here
+    },
+    {
+      title: "Advanced Robotics",
+      price: "$99.99",
+      duration: "8 weeks",
+      courses: "10",
+      sales: "85",
+      imgIcon: cyber,
+      image: { url: cyber }, // Use imported asset here
+    },
+    {
+      title: "Python for Beginners",
+      price: "$49.99",
+      duration: "4 weeks",
+      courses: "5",
+      sales: "120",
+      imgIcon: python,
+      image: { url: python }, // Use imported asset here
+    },
+    {
+      title: "Artifical Intelligence for Beginners",
+      price: "$49.99",
+      duration: "4 weeks",
+      courses: "5",
+      sales: "120",
+      imgIcon: ai,
+      image: { url: ai }, // Use imported asset here
+    },
+    {
+      title: "Advanced Robotics",
+      price: "$99.99",
+      duration: "8 weeks",
+      courses: "10",
+      sales: "85",
+      imgIcon: cyber,
+      image: { url: cyber }, // Use imported asset here
+    },
+    {
+      title: "Python for Beginners",
+      price: "$49.99",
+      duration: "4 weeks",
+      courses: "5",
+      sales: "120",
+      imgIcon: python,
+      image: { url: python }, // Use imported asset here
+    },
+    // Add more services as needed
+  ];
 
   const handleNext = () => {
     if (currentIndex + servicesPerPage < services.length) {
@@ -96,33 +136,31 @@ const Shop = () => {
     }
   };
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
   const visibleServices = services.slice(
     currentIndex,
     currentIndex + servicesPerPage
   );
 
-  console.log(services)
-
   return (
     <section className="bg-gray">
       <div className="p-5">
-        <div className="flex flex-wrap w-full">
-          <div className="flex justify-between lg:px-8" data-aos="fade-up">
-            <div className="flex lg:w-1/3 space-x-8">
+        <div className="flex flex-wrap w-full" >
+          <div className=" lg:px-8 w-fit " data-aos="fade-up">
+            <div className="flex lg:w-1/3 space-x-8  ">
               <img src={robo} alt="Robotics Course" />
-              <div className="content-center text-wrap text-brown text-2xl md:text-4xl poppins-extrabold">
-                Upcoming
-                <span className="text-gold text-2xl md:text-5xl poppins-extrabold">
-                  Courses-
-                </span>
-                Gear up for some Fun
+              <div className="content-center text-wrap w-[40vw]  text-brown text-2xl md:text-4xl poppins-extrabold">
+                <p className="" >
+                  Upcoming
+                  <span className="ml-4 text-gold text-2xl md:text-5xl poppins-extrabold">
+                    Courses-
+                  </span>
+                  <span className="inline "> Gear up</span>
+                  <span className=""> for some Fun</span>
+                </p>
               </div>
             </div>
             <div className="flex self-center gap-x-2">
-              <button
+              {/* <button
                 onClick={handlePrevious}
                 disabled={currentIndex === 0}
                 className="flex lg:w-20 w-10 h-10 lg:h-20 justify-center items-center rounded-full border border-black"
@@ -132,8 +170,8 @@ const Shop = () => {
                   src={leftArrow}
                   alt="Previous"
                 />
-              </button>
-              <button
+              </button> */}
+              {/* <button
                 onClick={handleNext}
                 disabled={currentIndex + servicesPerPage >= services.length}
                 className="flex lg:w-20 lg:h-20 w-10 h-10 justify-center items-center rounded-full border border-black"
@@ -143,7 +181,7 @@ const Shop = () => {
                   src={rightArrow}
                   alt="Next"
                 />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
